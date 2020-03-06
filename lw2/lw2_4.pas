@@ -41,5 +41,3 @@ BEGIN {GetParametr}
   Stringer := GetEnv('QUERY_STRING');
   WRITELN('Age: ', GetQueryStringParameter('age'))
 END. {GetParametr}
-
-  

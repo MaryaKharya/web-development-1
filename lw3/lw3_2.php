@@ -7,14 +7,11 @@
   
   $text = getGETParameter('identifier');
 
-  $n = 0;
-  $Ch = $text[$n];
   if ($text !== null)
-    if (is_numeric($Ch))
+    if ({хз какая команда}("/^[a-zA-Z]+[a-zA-Z0-9]*$/"))
       echo 'No, invalid identifier';
     else
       echo 'Yes, correct identifier';
   else
-    echo 'Not found identifier'
+    echo 'Not found identifier';
   
-?>
