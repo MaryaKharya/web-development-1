@@ -5,18 +5,11 @@ body {
   color: #222222;
 }
 
-.clearfix:after {       /*?*/
-  content:'';
-  display: table;
-  width: 100%;
-  clear: both;
-}
-
 div {
   box-sizing: border-box;  /*?*/
 }
 
-header {
+article {
   background: url(../img/first-bg.jpg) no-repeat center top / cover; /*?*/
   padding-bottom: 360px;
 }

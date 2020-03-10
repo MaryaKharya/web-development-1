@@ -2,7 +2,7 @@
   header('Content-Type: text/plain');
   function GETParameter(string $text): ?string
   {
-    return isset($_GET[$text]) ? (string)$_GET[$text] : null; //для чего string?
+    return isset($_GET[$text]) ? (string)$_GET[$text] : null;
   }
   
   $first_name = GETParameter('first_name');

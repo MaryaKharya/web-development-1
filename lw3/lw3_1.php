@@ -7,12 +7,9 @@
   
   $text = getGETParameter('text');
   
-  //Удаляем пробелы перед текстом и в конце
+  //Delete spaces before the text and at the end
   $text = trim($text, ' ');                    
 
-  //Выводим слова, сокращяя количество пробелов между ними до одного
+  //Print words, replacing few spaces with one
   $text = preg_replace('/\s+/', ' ', $text);                          
   echo $text;
-  
-/* ?>
-далее html либо к-н друго код. */

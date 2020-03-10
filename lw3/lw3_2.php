@@ -8,7 +8,7 @@
   $text = getGETParameter('identifier');
 
   if ($text !== null)
-    if (preg_match("/^[a-zA-Z]+[a-zA-Z0-9]*$/", $text))
+    if ((preg_match("/^[a-zA-Z][a-zA-Z0-9]*$/", $text)) && (!preg_match("/[#]/", $text)))
       echo 'Yes, correct identifier';
     else
       echo 'No, invalid identifier';

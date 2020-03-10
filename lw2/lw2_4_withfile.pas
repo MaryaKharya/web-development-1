@@ -9,7 +9,7 @@ VAR
   Indexer, Count: INTEGER;
   F1: TEXT;
 BEGIN {GetQueryStringParameter}
-  Indexer := Pos(Key, Stringer);   {Узнаем на каком месте находиться первый символ строки Key}
+  Indexer := Pos(Key, Stringer);   {find out where is first character 'Key'}
   IF Indexer <> 0
   THEN
     BEGIN
