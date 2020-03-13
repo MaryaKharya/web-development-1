@@ -1,0 +1,148 @@
+body 
+{
+    font-family: Arial, sans-serif; /*Запрашиваем на компьютере пользователя шрифт Arial, иначе загружаем любой без засечек*/
+    padding: 0; /*Обнуляем уст-е браузером по-у оступы внутрь эл-а*/
+    margin: 0; /*отсуп наружу эл-а(по периметру)*/
+    color: #555;
+}
+
+div
+{
+    box-sizing: border-box;        /*Записать*/     
+}
+
+.container
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.photo
+{
+    width: 330px;
+    height: 350px;
+    margin: 100px 0 0 20px;
+}
+
+.quote 
+{
+    display: inline;             /*Записать*/
+    position: absolute;          /*Записать*/
+    margin: 150px 0 0 60px;
+}
+
+.quote p
+{
+    margin: 0 0 0 60px;
+    font: Italic 28px/1.5 Georgia;
+    color: #848484
+}
+
+.quote b
+{
+    margin: 0 0 0 60px;
+    font: Bold 16px/2.5 'Open Sans';
+    color: #333
+}
+
+.midlle
+{ 
+    margin: 50px 0 0 20px;
+}
+
+.favorite b
+{
+    width: inherit;
+    margin: 0;
+    font: Bold 24px/1.5 'Open Sans';
+    color: #15a98c
+}
+
+.writers
+{
+    width: 260px;
+    float: left;
+}
+
+.midlle ul
+{
+    padding: 0 0 0 20px;
+}
+
+li
+{
+    margin: 15px 0 0 0;
+    font: 19px/1.2 Georgia;
+}
+
+.text1
+{
+    float: right;
+    position: relative;
+    margin: 0 75px 0 0;
+}
+
+.text1 p
+{
+    font: 19px/1.5 Georgia;
+    margin: 50px 0 0 0;
+}
+
+h1
+{
+    font: Bold 48px 'Open Sans';
+    margin: -10px 0 0 0;
+}
+
+.rectangle
+{
+    background: #45c3aa;
+    border-radius: 10px;
+    width: 60px;
+    height: 6px;
+    margin: 25px 0 0 0;
+}
+
+.movies
+{
+    width: 260px;
+    float: left;
+    margin: 50px 0 0 20px;
+}
+
+ol
+{
+    padding: 0 0 0 20px;
+}
+
+.hobby
+{
+    float: right;
+    margin: 0 30px 135px 0;    
+}
+
+h2
+{
+    font: Bold 36px 'Open Sans';
+    margin: 60px 0 0 0;
+}
+
+.hobby p
+{
+    font: 19px/1.5 Georgia;
+    margin: 30px 0 0 0;
+}
+
+.ref
+{
+    display: block;
+    color: #15a98b;
+    text-decoration: underline;
+    font: 19px Georgia;
+    margin: 60px 0 0 0;
+}
+
+.ref:hover
+{
+    color: #098d72;
+}
