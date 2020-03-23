@@ -22,7 +22,10 @@ div
 nav 
 {
     width: 960px;
-    margin: 0 auto;
+    position: fixed;
+    margin: 0 120px;
+    top: 0;
+    z-index: 1;
 }
 
 nav:before
@@ -31,8 +34,8 @@ nav:before
     display: block;
     height: 50px;
     width: 100%;
-    background: #b9bdb9;
-    position: absolute;
+    background: #fff;
+    position: fixed;
     left: 0;
     z-index: -1;
 }
@@ -40,7 +43,7 @@ nav:before
 .menu
 {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 8px;
   list-style: none;
   height: 50px;
 }
@@ -50,13 +53,19 @@ nav:before
   float: left; 
 }
 
+.menu_about
+{
+    background: #15a98c;
+}
+
 .icon
 {
   color: #000;
   display: block;
-  height: 50px;
-  padding: 0 30px;
+  height: 48.5px;
+  padding: 0 21px 0 30px;
   text-decoration: none;
+  text-align: center;
   font-size: 19px;    
   line-height: 50px;
 }
@@ -65,35 +74,39 @@ nav:before
 {
     background: url(../img/about_me_icon.png) no-repeat;
     background-position: 5px 16px;
+    color: #fff;
     margin: 1px 0 0 16px;
 }
 
 .hobby_icon
 {
     background: url(../img/hobby_icon.png) no-repeat;
-    background-position: 4px 17px;
+    background-position: 13px 17px;
     margin: 1px 0 0 7px;
+    padding-left: 39px;
 }
 
 .video_icon
 {
     background: url(../img/video_icon.png) no-repeat;
-    background-position: 3px 16px;
+    background-position: 12px 16px;
     margin: 1px 0 0 7px;
+    padding-left: 38px;
 }
 
 article
 {
     background: url(../img//background.png) no-repeat;
-    background-position: -8px 50px;
+    background-position: 0 22px;
     height: 1000px;   /*Убрать!*/
 }
 
 .about
 {
     width:  960px;
-    margin: 220px auto 0 auto;
+    margin: 0 auto;
     position: relative;
+    top: 242px;
 }
 
 .my_photo
@@ -101,13 +114,14 @@ article
     position: absolute;
     left: 0;
     margin-top: -10px;
+    margin-left: 8px;
 }
 
 .qoute
 {
     color: #fff;
     font: italic 28px/1.5 Georgia;
-    margin-left:  390px;
+    margin-left:  398px;
 }
 
 .citation
@@ -127,7 +141,7 @@ article
 .name
 {
     font: 700 48px 'Open Sans';
-    margin-left: 394px;
+    margin-left: 402px;
     padding-top: 32px;
 }
 
@@ -138,7 +152,7 @@ article
     width: 60px;
     height: 6px;
     position: relative;
-    margin-left: 390px;
+    margin-left: 398px;
     bottom: 20px; 
 }
 
@@ -147,7 +161,7 @@ article
     width: 507px;
     float: right;
     position: relative;
-    margin: 24px 63px 0 0;
+    margin: 24px 55px 0 0;
 }
 
 .header_list
@@ -162,6 +176,7 @@ article
     float: left;
     position: relative;
     top: 59px;
+    left: 8px;
 }
 
 .list_writer
@@ -192,7 +207,7 @@ article
 .hobby_text
 {
     width: 555px;
-    margin: 12px 15px 0 0;
+    margin: 12px 7px 0 0;
 }
 
 .movies
@@ -200,6 +215,7 @@ article
     float: left;
     position: relative;
     top: 73px;
+    left: 8px;
 
 }
 
@@ -236,14 +252,16 @@ article
     font: 400 36px 'Open Sans';
     margin: 0;
     position: relative;
-    top: 168px;
+    top: 410px;
+    left: 8px;
 }
 
 .loving_movies
 {
     display: flex;
     position: relative;
-    top: 198px;
+    top: 440px;
+    left: 8px;
 }
 
 .film
@@ -276,17 +294,17 @@ article
     display: block;
     width: 202px;
     padding: 9px;
-    margin: 0 480px;
+    margin: 0 488px;
     border-radius: 5px;
     position: relative;
-    top: 236px;
+    top: 478px;
     text-align: center;
     text-decoration: none;
 }
 
 article:after
 {
-    content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
+    content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ» ";
     display: block;
     position: relative;
     background: #f5f5f5;
@@ -295,11 +313,20 @@ article:after
     line-height: 70px;
     height: 70px;
     width: 100%;
-    top: 310px;
-    
+    top: 549px;   
 }
 
+.anchor_hobby
+{
+    position: relative;
+    top: 200px;
+}
 
+.anchor_film
+{
+    position: relative;
+    top: 300px;
+}
 
 
 
