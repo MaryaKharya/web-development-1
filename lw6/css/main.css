@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+body 
+{
+    font: 400 19px/1.7 Georgia; 
+    padding: 0; 
+    margin: 0; 
+    color: #222222;
+}
+
+.container
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+div
+{
+    box-sizing: border-box;  
+}
+
+nav 
+{
+    width: 960px;
+    margin: 0 auto;
+}
+
+nav:before
+{
+    content: "";
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: #b9bdb9;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.menu
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 50px;
+}
+
+.menu li
+{
+  float: left; 
+}
+
+.icon
+{
+  color: #000;
+  display: block;
+  height: 50px;
+  padding: 0 30px;
+  text-decoration: none;
+  font-size: 19px;    
+  line-height: 50px;
+}
+
+.person_icon
+{
+    background: url(../img/about_me_icon.png) no-repeat;
+    background-position: 5px 16px;
+    margin: 1px 0 0 16px;
+}
+
+.hobby_icon
+{
+    background: url(../img/hobby_icon.png) no-repeat;
+    background-position: 4px 17px;
+    margin: 1px 0 0 7px;
+}
+
+.video_icon
+{
+    background: url(../img/video_icon.png) no-repeat;
+    background-position: 3px 16px;
+    margin: 1px 0 0 7px;
+}
+
+article
+{
+    background: url(../img//background.png) no-repeat;
+    background-position: -8px 50px;
+    height: 1000px;   /*Убрать!*/
+}
+
+.about
+{
+    width:  960px;
+    margin: 220px auto 0 auto;
+    position: relative;
+}
+
+.my_photo
+{
+    position: absolute;
+    left: 0;
+    margin-top: -10px;
+}
+
+.qoute
+{
+    color: #fff;
+    font: italic 28px/1.5 Georgia;
+    margin-left:  390px;
+}
+
+.citation
+{
+    width: 510px;
+    padding: 15px 0 0 3px;
+}
+
+.author
+{
+    font: 600 16px/1'Open Sans';
+    position: relative;
+    bottom: 2px;
+    left: 3px;
+}
+
+.name
+{
+    font: 700 48px 'Open Sans';
+    margin-left: 394px;
+    padding-top: 32px;
+}
+
+.rectangle
+{
+    background: #45c3aa;
+    border-radius: 10px;
+    width: 60px;
+    height: 6px;
+    position: relative;
+    margin-left: 390px;
+    bottom: 20px; 
+}
+
+.physic
+{
+    width: 507px;
+    float: right;
+    position: relative;
+    margin: 24px 63px 0 0;
+}
+
+.header_list
+{
+    font: 600 24px/1.5 'Open Sans';
+    color: #15a98c;
+    margin: 0;
+}
+
+.writers
+{
+    float: left;
+    position: relative;
+    top: 59px;
+}
+
+.list_writer
+{
+    padding: 0 0 0 21px;
+    margin: 18px 0;
+}
+
+.favorite li
+{
+    margin: 14px 0 0 0;
+    font: 19px/1.16 Georgia;
+}
+
+.hobby
+{
+    float: right;
+    position: relative;
+    top: 38px;
+}
+
+.hobby_header
+{
+    font: 400 36px 'Open Sans';
+    margin: 0 0 0 -2px;
+}
+
+.hobby_text
+{
+    width: 555px;
+    margin: 12px 15px 0 0;
+}
+
+.movies
+{
+    float: left;
+    position: relative;
+    top: 73px;
+
+}
+
+.list_film
+{
+    padding: 0 0 0 21px;
+    margin: 17px 0;
+}
+
+.ref
+{
+    color: #15a98b;
+    font: 400 19px Georgia;
+    position: relative;
+    top: 41px;
+}
+
+.ref:after
+{
+    content: "→";
+    display: block;
+    position: absolute;
+    left: 120px;
+    bottom: -1px;
+}
+
+.clear
+{
+    clear: both;    
+}
+
+.header_loving_movies
+{
+    font: 400 36px 'Open Sans';
+    margin: 0;
+    position: relative;
+    top: 168px;
+}
+
+.loving_movies
+{
+    display: flex;
+    position: relative;
+    top: 198px;
+}
+
+.film
+{
+    margin-right: 20px;
+}
+
+.film_header
+{
+    font: 700 22px 'Open Sans';
+    margin: 14px 0 0 -2px;
+}
+
+.astral
+{
+    margin-left: 0;
+}
+
+.film_text
+{
+    width: 285px;
+    margin-top: 18px;
+    font: 400 16px/1.8 Georgia;
+}
+
+.buttom
+{
+    background: #45c3aa;
+    color: #fff;
+    display: block;
+    width: 202px;
+    padding: 9px;
+    margin: 0 480px;
+    border-radius: 5px;
+    position: relative;
+    top: 236px;
+    text-align: center;
+    text-decoration: none;
+}
+
+article:after
+{
+    content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
+    display: block;
+    position: relative;
+    background: #f5f5f5;
+    font-size: 16px;
+    text-align: center;
+    line-height: 70px;
+    height: 70px;
+    width: 100%;
+    top: 310px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
