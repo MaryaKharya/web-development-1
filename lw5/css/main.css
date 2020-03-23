@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
 body 
 {
-    font-family: Georgia, sans-serif; /*Запрашиваем на компьютере пользователя шрифт Arial, иначе загружаем любой без засечек*/
-    padding: 0; /*Обнуляем уст-е браузером по-у оступы внутрь эл-а*/
-    margin: 0; /*отсуп наружу эл-а(по периметру)*/
+    font: 19px/1.7 Georgia;
+    padding: 0;
+    margin: 0; 
     color: #555;
 }
 
 div
 {
-    box-sizing: border-box;        /*Записать*/     
+    box-sizing: border-box;         
 }
 
 .container
@@ -26,8 +28,8 @@ div
 
 .quote 
 {
-    display: inline;             /*Записать*/
-    position: absolute;          /*Записать*/
+    display: inline;             
+    position: absolute;          
 }
 
 .quotes
@@ -36,17 +38,18 @@ div
     margin: 161px 0 0 60px;
 }
 
-.quote p
+.citation
 {
+    width: 450px;
     margin: 230px 0 0 120px;
     font: Italic 28px/1.5 Georgia;
     color: #848484
 }
 
-.quote b
+.author
 {
-    margin: 0 0 0 124px;
-    font: Bold 16px/2.9 'Open Sans';
+    margin: 0 0 0 123px;
+    font: 600 16px/2.9 'Open Sans';
     color: #333
 }
 
@@ -54,7 +57,7 @@ div
 {
     width: inherit;
     margin: 0;
-    font: Bold 24px/1.5 'Open Sans';
+    font: 600 24px/1.5 'Open Sans';
     color: #15a98c
 }
 
@@ -62,12 +65,13 @@ div
 {
     width: 260px;
     float: left;
-    margin: 39px 0 0 20px;
+    margin: 33px 0 0 20px;
 }
 
-ul
+.list_writer
 {
     padding: 0 0 0 21px;
+    margin: 17px 0;
 }
 
 li
@@ -76,23 +80,17 @@ li
     font: 19px/1.15 Georgia;
 }
 
-.text1
+.text
 {
     float: right;
     position: relative;
     margin: 39px 83px 0 0;
 }
 
-.text1 p
+.name
 {
-    font: 19px/1.7 Georgia;
-    margin: 39px 0 0 0;
-}
-
-h1
-{
-    font: Bold 48px 'Open Sans';
-    margin: -11px 0 0 4px;
+    font: 700 48px 'Open Sans';
+    margin: -16px 0 0 4px;
 }
 
 .rectangle
@@ -101,34 +99,42 @@ h1
     border-radius: 10px;
     width: 60px;
     height: 6px;
-    margin: 21px 0 0 0;
+    margin: 20px 0 0 0;
+}
+
+.physic
+{
+    width: 507px;
+    margin-top: 44px;
 }
 
 .movies
 {
     width: 260px;
     float: left;
-    margin: 34px 0 0 20px;
+    margin: 30px 0 0 20px;
 }
 
-ol
+.list_film
 {
     padding: 0 0 0 20px;
+    margin: 0;
 }
 
 .hobby
 {
+    width: 555px;
     float: right;
     margin: 0 35px 135px 0;    
 }
 
-h2
+.hobby_header
 {
-    font: Bold 36px 'Open Sans';
-    margin: 43px 0 0 -2px;
+    font: 400 36px 'Open Sans';
+    margin: 19px 0 0 -2px;
 }
 
-.hobby p
+.hobby_text
 {
     font: 19px/1.7 Georgia;
     margin: 12px 0 0 0;
