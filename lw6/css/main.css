@@ -316,6 +316,12 @@ article:after
     top: 549px;   
 }
 
+.anchor_about
+{
+    position: relative;
+    top: 150px;
+}
+
 .anchor_hobby
 {
     position: relative;
