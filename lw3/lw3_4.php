@@ -2,19 +2,27 @@
   header('Content-Type: text/plain');
   function GETParameter(string $text): ?string
   {
-    return isset($_GET[$text]) ? (string)$_GET[$text] : null; //для чего string?
+    return isset($_GET[$text]) ? (string)$_GET[$text] : null;
   }
-  
-  //Можно ли таким образом вызывать функцию? И почему не работает если вытащить переменные?
-  function AddData() {
-    $first_name = GETParameter('first_name');
-    $last_name = GETParameter('last_name');
-    $email = GETParameter('email');
-    $age = GETParameter('age');
-    file_put_contents('data/first_name.txt', $first_name);
-    file_put_contents('data/last_name.txt', $last_name);  
-    file_put_contents('data/email.txt', $email);  
-    file_put_contents('data/age.txt', $age);
+
+  function WriteInFile($text)
+  {
+    $Handle = Fopen("data/email.txt", "w");
+    Fwrite($Handle, $text);
+    Fclose($Handle);
+  }
+
+  function AddData() 
+  {
+    $Firstname = GETParameter('first_name');
+    $Lastname = GETParameter('last_name');
+    $Email = GETParameter('email');
+    $Age = GETParameter('age');
+
+
+    $Data = "First name: ${Firstname}\nLast name: ${Lastname}\nEmail: ${Email}\nAge: ${Age}\n";
+
+    WriteInFile($Data);
   } 
   
   AddData();
