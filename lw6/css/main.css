@@ -221,8 +221,9 @@ article
 
 .list_film
 {
-    padding: 0 0 0 21px;
+    padding: 0;
     margin: 17px 0;
+    list-style: none;
 }
 
 .ref
