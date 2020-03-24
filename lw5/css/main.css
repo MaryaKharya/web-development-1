@@ -48,9 +48,11 @@ div
 
 .author
 {
-    margin: 0 0 0 123px;
+    margin-left: 3px;
     font: 600 16px/2.9 'Open Sans';
-    color: #333
+    color: #333;
+    position: relative;
+    bottom: 2px;
 }
 
 .favorite strong
