@@ -6,28 +6,28 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
+    <nav>                       <!--Меню-->
+      <ul class="menu">
+        <li class="menu_about">
+          <a href="#about_me" class="person_icon icon">
+            Обо мне
+          </a>  
+        </li>
+        <li>
+          <a href="#hobby" class="hobby_icon icon">
+            Мое хобби
+          </a>  
+        </li>
+        <li>
+          <a href="#film" class="video_icon icon">
+            Любимые фильмы
+          </a>  
+        </li>
+      </ul>
+    </nav>
     <article>
       <div class="container">
         <a class="anchor_about" name="about_me"></a>
-        <nav>                       <!--Меню-->
-          <ul class="menu">
-            <li class="menu_about">
-              <a href="#about_me" class="person_icon icon">
-                Обо мне
-              </a>  
-            </li>
-            <li>
-              <a href="#hobby" class="hobby_icon icon">
-                Мое хобби
-              </a>  
-            </li>
-            <li>
-              <a href="#film" class="video_icon icon">
-                Любимые фильмы
-              </a>  
-            </li>
-          </ul>
-        </nav>
         <div class="about">
           <img src="img/photo.png" class="my_photo">
           <div class="qoute">
@@ -70,7 +70,7 @@
               параллельном мире, где один из основных законов физики
               действовал не так, как в его мире. 
             </p>
-            <a class="ref" href="#">Напиши мне</a>
+            <a class="ref" href="#form">Напиши мне</a>
           </div>
           <div class="favorite movies">
             <h2 class="header_list">Любимые фильмы:</h2>
@@ -83,6 +83,10 @@
           </div>
           <div class="clear"></div>
         </div>
+      </div>
+    </article>
+    <section class="films">
+      <div class="container">   
         <h2 class="header_loving_movies">Любимые фильмы</h2>
         <a class="anchor_film" name="film"></a>
         <div class="loving_movies">
@@ -164,6 +168,56 @@
         </div>
         <a href="#" class="buttom">Все фильмы</a>
       </div>
-    </article>
+    </section>
+    <section>                   <!--Напиши мне-->
+      <a class="anchor_form" name="form"></a>
+      <div class="container">
+        <div class="header_text_me">
+          <div class="line"></div>
+          <h2 class="text_me">Напиши мне</h2>
+          <div class="line"></div>
+        </div>
+        <div class="form">
+          <form action="#" method="POST">
+            <label for="name">Ваше имя <span class="star">*</span></label>
+            <div>  
+              <input class="input_cell" name="name" id="name" type="text" maxlength="255" required="required" title="Имя" placeholder="Например, Иван">
+            </div>
+            <label for="name">Ваш email <span class="star">*</span></label>
+            <div>  
+              <input class="input_cell" name="email" id="email" type="email" maxlength="255" required="required" title="Email" placeholder="Например, Ivan12@mail.ru">
+            </div>
+            <label for="country">Откуда вы?</label>
+            <div>  
+              <select class="input_cell country" name="country" id="country" title="Страна" size="1">
+                <option>Россия</option>
+                <option>Белоруссия</option>
+                <option>Казахстан</option>
+                <option>Украина</option>
+                <option>Армения</option>
+                <option>Азербайджан</option>
+                <option>Киргизия</option>
+                <option>Молдавия</option>
+                <option>Таджикистан</option>
+                <option>Узбекистан</option>
+              </select>
+            </div>
+            <label for="sex">Ваш пол</label>
+            <div class="sex">
+              <input name="sex" id="male" type="radio" value="M">
+              <label for="male">Мужской</label>
+              <input name="sex" id="female" type="radio" value="F">
+              <label for="female">Женский</label>
+            </div>
+            <label for="name">Ваше сообщение <span class="star">*</span></label>
+            <div>
+              <textarea class="input_cell" name="sms" id="sms" maxlength="1020" title="Сообщение">
+              </textarea>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+          </form>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 
 body 
 {
@@ -12,6 +12,7 @@ body
 {
     width: 1200px;
     margin: 0 auto;
+    padding: 1px 0;
 }
 
 div
@@ -23,7 +24,7 @@ nav
 {
     width: 960px;
     position: fixed;
-    margin: 0 120px;
+    margin: 0 472px;
     top: 0;
     z-index: 1;
 }
@@ -73,16 +74,16 @@ nav:before
 .person_icon
 {
     background: url(../img/about_me_icon.png) no-repeat;
-    background-position: 5px 16px;
+    background-position: 6px 16px;
     color: #fff;
-    margin: 1px 0 0 16px;
+    margin: 1px 0 0 15px;
 }
 
 .hobby_icon
 {
     background: url(../img/hobby_icon.png) no-repeat;
-    background-position: 13px 17px;
-    margin: 1px 0 0 7px;
+    background-position: 12px 17px;
+    margin: 1px 0 0 8px;
     padding-left: 39px;
 }
 
@@ -97,23 +98,20 @@ nav:before
 article
 {
     background: url(../img//background.png) no-repeat;
-    background-position: -8px 22px;
-    height: 1000px;   /*Убрать!*/
+    background-position: -8px 50px;
 }
 
 .about
 {
     width:  960px;
     margin: 0 auto;
-    position: relative;
-    top: 242px;
+    padding-top: 241px;
 }
 
 .my_photo
 {
     position: absolute;
-    left: 0;
-    margin-top: -10px;
+    margin-top: 18px;
 }
 
 .qoute
@@ -242,22 +240,19 @@ article
 
 .clear
 {
-    clear: both;    
+    clear: both; 
+    padding-top: 135px;   
 }
 
 .header_loving_movies
 {
     font: 400 36px 'Open Sans';
-    margin: 0;
-    position: relative;
-    top: 410px;
+    margin: 31px 0 30px 0;    
 }
 
 .loving_movies
 {
     display: flex;
-    position: relative;
-    top: 440px;
 }
 
 .film
@@ -290,15 +285,146 @@ article
     display: block;
     width: 202px;
     padding: 9px;
-    margin: 0 480px;
+    margin: 38px 480px 59px 480px;
     border-radius: 5px;
-    position: relative;
-    top: 478px;
     text-align: center;
     text-decoration: none;
 }
 
-article:after
+.films
+{
+    background: #f9f9f9;
+}
+
+
+.text_me
+{
+    font: 300 36px 'Open Sans';
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 19px;
+}
+
+.line
+{
+    background: #c4c4c4;
+    width: 200px;
+    height: 1px;
+    display: inline-block;
+    margin: 12px 0;
+}
+
+.header_text_me
+{
+    margin: 40px 0 66px 0;
+    padding: 0 248px;
+}
+
+.form
+{
+    width: 542px;
+    height: 730px;
+}
+
+label
+{
+    font: 400 20px 'Open Sans';
+}
+
+.star
+{
+    color: red;
+}
+
+.input_cell:focus
+{
+    border: 2px solid #15a98c; 
+}
+
+.input_cell
+{
+    margin: 2px 0 25px 1px;
+    font: 400 20px 'Open Sans';
+    padding-left: 17px;
+}
+
+input[name="name"], input[name="email"]
+{
+    width: 519px;
+    height: 44px;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+}
+
+.country
+{
+    width: 540px;
+    height: 50px;
+    font: 400 18px 'Open Sans';
+    color: #555; 
+    border: 2px solid #a6a6a6;
+    margin: 4px 0 42px 1px;
+    padding-left: 16px;
+    padding-bottom: 1px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../img/arrow_down.png) no-repeat;
+    background-position: 498px 18px;
+}
+
+.sex
+{
+    margin: 4px 0 36px 0;
+}
+
+label[for="male"], label[for="female"]
+{
+    font: 400 18px 'Open Sans';
+}
+
+
+#male
+{
+    margin-left: 1px;
+    
+}
+
+#female
+{
+    margin-left: 37px;
+}
+
+
+#sms
+{
+    width: 517px;
+    height: 142px;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+    font: 400 20px 'Open Sans';
+    padding: 5px;
+}
+
+.submit
+{
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    font: 400 19px Georgia;
+    line-height: 50px;
+    background: #15a98c;
+    border-radius: 5px;
+    margin: 15px 0 0 1px;
+    border: none;
+}
+
+.form
+{
+    margin: 0 auto;
+}
+
+body:after
 {
     content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
     display: block;
@@ -306,11 +432,11 @@ article:after
     background: #f5f5f5;
     font-size: 16px;
     text-align: center;
-    line-height: 70px;
+    line-height: 65px;
     height: 70px;
     width: 100%;
-    top: 549px;  
-    left: -9px; 
+    top: 53px;  
+    left: -10px; 
 }
 
 .anchor_about
@@ -330,6 +456,34 @@ article:after
     position: relative;
     top: 300px;
 }
+
+.anchor_form
+{
+    position: relative;
+    bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
