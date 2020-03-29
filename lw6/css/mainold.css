@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+body 
+{
+    font: 19px/1.7 Georgia;
+    padding: 0;
+    margin: 0; 
+    color: #555;
+}
+
+div
+{
+    box-sizing: border-box;         
+}
+
+.container
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.photo
+{
+    width: 330px;
+    height: 350px;
+    margin: 111px 0 0 20px;
+}
+
+.quote 
+{
+    display: inline;             
+    position: absolute;          
+}
+
+.quotes
+{
+    position: absolute;
+    margin: 161px 0 0 60px;
+}
+
+.citation
+{
+    width: 450px;
+    margin: 230px 0 0 120px;
+    font: Italic 28px/1.5 Georgia;
+    color: #848484
+}
+
+.author
+{
+    margin: 0 0 0 123px;
+    font: 600 16px/2.9 'Open Sans';
+    color: #333
+}
+
+.favorite strong
+{
+    width: inherit;
+    margin: 0;
+    font: 600 24px/1.5 'Open Sans';
+    color: #15a98c
+}
+
+.writers
+{
+    width: 260px;
+    float: left;
+    margin: 33px 0 0 20px;
+}
+
+.list_writer
+{
+    padding: 0 0 0 21px;
+    margin: 17px 0;
+}
+
+li
+{
+    margin: 15px 0 0 0;
+    font: 19px/1.15 Georgia;
+}
+
+.text
+{
+    float: right;
+    position: relative;
+    margin: 39px 83px 0 0;
+}
+
+.name
+{
+    font: 700 48px 'Open Sans';
+    margin: -16px 0 0 4px;
+}
+
+.rectangle
+{
+    background: #45c3aa;
+    border-radius: 10px;
+    width: 60px;
+    height: 6px;
+    margin: 20px 0 0 0;
+}
+
+.physic
+{
+    width: 507px;
+    margin-top: 44px;
+}
+
+.movies
+{
+    width: 260px;
+    float: left;
+    margin: 30px 0 0 20px;
+}
+
+.list_film
+{
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+
+.hobby
+{
+    width: 555px;
+    float: right;
+    margin: 0 35px 135px 0;    
+}
+
+.hobby_header
+{
+    font: 400 36px 'Open Sans';
+    margin: 19px 0 0 -2px;
+}
+
+.hobby_text
+{
+    font: 19px/1.7 Georgia;
+    margin: 12px 0 0 0;
+}
+
+.ref
+{
+    display: block;
+    color: #15a98b;
+    text-decoration: none;
+    font: 19px Georgia;
+    margin: 46px 0 0 0;
+}
+
+.ref:hover
+{
+    color: #098d72;
+}
