@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+body 
+{
+    font: 400 19px/1.7 Georgia; 
+    padding: 0; 
+    margin: 0; 
+    color: #222222;
+}
+
+.container
+{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 1px 0;
+}
+
+div
+{
+    box-sizing: border-box;  
+}
+
+nav 
+{
+    width: 960px;
+    position: fixed;
+    margin: 0 472px;
+    top: 0;
+    z-index: 1;
+}
+
+nav:before
+{
+    content: "";
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+}
+
+.menu
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 50px;
+}
+
+.menu li
+{
+  float: left; 
+}
+
+.menu_about
+{
+    background: #15a98c;
+}
+
+.icon
+{
+  color: #000;
+  display: block;
+  height: 48.5px;
+  padding: 0 21px 0 30px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 19px;    
+  line-height: 50px;
+}
+
+.person_icon
+{
+    background: url(../img/about_me_icon.png) no-repeat;
+    background-position: 6px 16px;
+    color: #fff;
+    margin: 1px 0 0 15px;
+}
+
+.hobby_icon
+{
+    background: url(../img/hobby_icon.png) no-repeat;
+    background-position: 12px 17px;
+    margin: 1px 0 0 8px;
+    padding-left: 39px;
+}
+
+.video_icon
+{
+    background: url(../img/video_icon.png) no-repeat;
+    background-position: 12px 16px;
+    margin: 1px 0 0 7px;
+    padding-left: 38px;
+}
+
+article
+{
+    background: url(../img//background.png) no-repeat;
+    background-position: -8px 50px;
+}
+
+.about
+{
+    width:  960px;
+    margin: 0 auto;
+    padding-top: 241px;
+}
+
+.my_photo
+{
+    position: absolute;
+    margin-top: 18px;
+}
+
+.qoute
+{
+    color: #fff;
+    font: italic 28px/1.5 Georgia;
+    margin-left:  390px;
+}
+
+.citation
+{
+    width: 510px;
+    padding: 15px 0 0 3px;
+}
+
+.author
+{
+    font: 600 16px/1'Open Sans';
+    position: relative;
+    bottom: 2px;
+    left: 3px;
+}
+
+.name
+{
+    font: 700 48px 'Open Sans';
+    margin-left: 394px;
+    padding-top: 32px;
+}
+
+.rectangle
+{
+    background: #45c3aa;
+    border-radius: 10px;
+    width: 60px;
+    height: 6px;
+    position: relative;
+    margin-left: 390px;
+    bottom: 20px; 
+}
+
+.physic
+{
+    width: 507px;
+    float: right;
+    position: relative;
+    margin: 24px 63px 0 0;
+}
+
+.header_list
+{
+    font: 600 24px/1.5 'Open Sans';
+    color: #15a98c;
+    margin: 0;
+}
+
+.writers
+{
+    float: left;
+    position: relative;
+    top: 59px;
+}
+
+.list_writer
+{
+    padding: 0 0 0 21px;
+    margin: 18px 0;
+}
+
+.favorite li
+{
+    margin: 14px 0 0 0;
+    font: 19px/1.16 Georgia;
+}
+
+.hobby
+{
+    float: right;
+    position: relative;
+    top: 38px;
+}
+
+.hobby_header
+{
+    font: 400 36px 'Open Sans';
+    margin: 0 0 0 -2px;
+}
+
+.hobby_text
+{
+    width: 555px;
+    margin: 12px 15px 0 0;
+}
+
+.movies
+{
+    float: left;
+    position: relative;
+    top: 73px;
+
+}
+
+.list_film
+{
+    padding: 0;
+    margin: 17px 0;
+    list-style: none;
+}
+
+.ref
+{
+    color: #15a98b;
+    font: 400 19px Georgia;
+    position: relative;
+    top: 41px;
+}
+
+.ref:after
+{
+    content: "→";
+    display: block;
+    position: absolute;
+    left: 120px;
+    bottom: -1px;
+}
+
+.clear
+{
+    clear: both; 
+    padding-top: 135px;   
+}
+
+.header_loving_movies
+{
+    font: 400 36px 'Open Sans';
+    margin: 31px 0 30px 0;    
+}
+
+.loving_movies
+{
+    display: flex;
+}
+
+.film
+{
+    margin-right: 20px;
+}
+
+.film_header
+{
+    font: 700 22px 'Open Sans';
+    margin: 14px 0 0 -2px;
+}
+
+.astral
+{
+    margin-left: 0;
+}
+
+.film_text
+{
+    width: 285px;
+    margin-top: 18px;
+    font: 400 16px/1.8 Georgia;
+}
+
+.buttom
+{
+    background: #45c3aa;
+    color: #fff;
+    display: block;
+    width: 202px;
+    padding: 9px;
+    margin: 38px 480px 59px 480px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.films
+{
+    background: #f9f9f9;
+}
+
+
+.text_me
+{
+    font: 300 36px 'Open Sans';
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 19px;
+}
+
+.line
+{
+    background: #c4c4c4;
+    width: 200px;
+    height: 1px;
+    display: inline-block;
+    margin: 12px 0;
+}
+
+.header_text_me
+{
+    margin: 40px 0 66px 0;
+    padding: 0 248px;
+}
+
+.form
+{
+    width: 542px;
+    height: 730px;
+}
+
+label
+{
+    font: 400 20px 'Open Sans';
+}
+
+.star
+{
+    color: red;
+}
+
+.input_cell:focus
+{
+    border: 2px solid #15a98c; 
+}
+
+.input_cell
+{
+    margin: 2px 0 25px 1px;
+    font: 400 20px 'Open Sans';
+    padding-left: 17px;
+}
+
+input[name="name"], input[name="email"]
+{
+    width: 519px;
+    height: 44px;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+}
+
+.country
+{
+    width: 540px;
+    height: 50px;
+    font: 400 18px 'Open Sans';
+    color: #555; 
+    border: 2px solid #a6a6a6;
+    margin: 4px 0 42px 1px;
+    padding-left: 16px;
+    padding-bottom: 1px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../img/arrow_down.png) no-repeat;
+    background-position: 498px 18px;
+}
+
+.sex
+{
+    margin: 4px 0 36px 0;
+}
+
+label[for="male"], label[for="female"]
+{
+    font: 400 18px 'Open Sans';
+}
+
+
+#male
+{
+    margin-left: 1px;
+    
+}
+
+#female
+{
+    margin-left: 37px;
+}
+
+
+#sms
+{
+    width: 517px;
+    height: 142px;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+    font: 400 20px 'Open Sans';
+    padding: 5px;
+}
+
+.submit
+{
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    font: 400 19px Georgia;
+    line-height: 50px;
+    background: #15a98c;
+    border-radius: 5px;
+    margin: 15px 0 0 1px;
+    border: none;
+}
+
+.form
+{
+    margin: 0 auto;
+}
+
+body:after
+{
+    content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
+    display: block;
+    position: relative;
+    background: #f5f5f5;
+    font-size: 16px;
+    text-align: center;
+    line-height: 65px;
+    height: 70px;
+    width: 100%;
+    top: 53px;  
+    left: -10px; 
+}
+
+.anchor_about
+{
+    position: relative;
+    top: 150px;
+}
+
+.anchor_hobby
+{
+    position: relative;
+    top: 200px;
+}
+
+.anchor_film
+{
+    position: relative;
+    top: 300px;
+}
+
+.anchor_form
+{
+    position: relative;
+    bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
