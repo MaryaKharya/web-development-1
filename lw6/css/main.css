@@ -105,26 +105,22 @@ article
 {
     width:  960px;
     margin: 0 auto;
-    padding-top: 241px;
+    padding-top: 259px;
 }
 
-.my_photo
+.name
 {
-    position: absolute;
-    margin-top: 18px;
-}
-
-.qoute
-{
-    color: #fff;
-    font: italic 28px/1.5 Georgia;
-    margin-left:  390px;
+    float: right;
+    margin: 0 56px;
 }
 
 .citation
 {
     width: 510px;
-    padding: 15px 0 0 3px;
+    color: #fff;
+    font: italic 28px/1.5 Georgia;
+    margin: 25px 0;
+    margin-bottom: 72px;
 }
 
 .author
@@ -135,11 +131,10 @@ article
     left: 3px;
 }
 
-.name
+.name_header
 {
     font: 700 48px 'Open Sans';
-    margin-left: 394px;
-    padding-top: 32px;
+    margin-left: 1px;
 }
 
 .rectangle
@@ -148,8 +143,9 @@ article
     border-radius: 10px;
     width: 60px;
     height: 6px;
-    position: relative;
-    margin-left: 390px;
+    position: absolute;
+    top: 568px;
+    left: 862px;
     bottom: 20px; 
 }
 
@@ -158,7 +154,7 @@ article
     width: 507px;
     float: right;
     position: relative;
-    margin: 24px 63px 0 0;
+    margin: -2px 63px 0 0;
 }
 
 .header_list
@@ -172,7 +168,7 @@ article
 {
     float: left;
     position: relative;
-    top: 59px;
+    top: 33px;
 }
 
 .list_writer
@@ -210,7 +206,7 @@ article
 {
     float: left;
     position: relative;
-    top: 73px;
+    top: 61px;
 
 }
 

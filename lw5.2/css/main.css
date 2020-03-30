@@ -104,20 +104,13 @@ article
 {
     width:  960px;
     margin: 0 auto;
-    padding-top: 234px;
-}
-
-.my_photo
-{
-    position: relative;
-    top: 26px;
+    padding-top: 260px;
 }
 
 .name
 {
     float: right;
-    margin-right: 17px;
-    margin-top: 26px;
+    margin-right: 16.5px;
 }
 
 .citation
@@ -158,14 +151,14 @@ article
 {
     width: 507px;
     float: right;
-    margin: 24px 63px;
+    margin: -2px 62.5px 38px 62.5px;
 }
 
 .writers
 {
     float: left;
     position: relative;
-    top: 59px;
+    top: 33px;
 }
 
 .header_list
@@ -190,26 +183,25 @@ article
 .hobby
 {
     float: right;
-    margin-top: 14px;
 }
 
 .hobby_header
 {
     font: 400 36px 'Open Sans';
-    margin: 0 0 0 -2px;
+    margin: 0 0 0 -1px;
 }
 
 .hobby_text
 {
     width: 555px;
-    margin: 12px 15px 0 0;
+    margin: 12px 15px 0 1px;
 }
 
 .movies
 {
     float: left;
     position: relative;
-    top: 49px;
+    top: 35px;
 }
 
 .list_film
@@ -225,6 +217,7 @@ article
     font: 400 19px Georgia;
     position: relative;
     top: 41px;
+    left: 1px;
 }
 
 .ref:after
@@ -232,8 +225,8 @@ article
     content: "→";
     display: block;
     position: absolute;
-    left: 120px;
-    bottom: -1px;
+    left: 121px;
+    bottom: -1.5px;
 }
 
 .clear
