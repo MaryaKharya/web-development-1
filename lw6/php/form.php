@@ -14,3 +14,4 @@
       $file = "../data/" . mb_strtolower($email) . ".txt";
       file_put_contents($file, $data);
     }
+?>

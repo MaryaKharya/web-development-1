@@ -1,9 +1,13 @@
+<?php
+  include 'form.php';
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Страничка о человеке</title>
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
   </head>
   <body>
     <nav>                       <!--Меню-->
@@ -29,7 +33,7 @@
       <div class="container">
         <a class="anchor_about" name="about_me"></a>
         <div class="about">
-          <img src="img/photo.png" class="my_photo">
+          <img src="../img/photo.png" class="my_photo">
           <div class="name">
             <blockquote class="citation">
               Мы берем на себя много, потому что 
@@ -91,7 +95,7 @@
         <a class="anchor_film" name="film"></a>
         <div class="loving_movies">
           <div class="film">
-            <img src="img/film1.png">
+            <img src="../img/film1.png">
             <h3 class="film_header">Побег из Шоушенка</h3>
             <p class="film_text">
               Успешный банкир Энди Дюфрейн 
@@ -111,7 +115,7 @@
             </p>
           </div>
           <div class="film">
-            <img src="img/film2.png">
+            <img src="../img/film2.png">
             <h3 class="film_header">Наркоз</h3>
             <p class="film_text">
               Клай Бересфорд вынужден лечь под 
@@ -125,7 +129,7 @@
             </p>    
           </div>
           <div class="film">
-            <img src="img/film3.png">
+            <img src="../img/film3.png">
             <h3 class="film_header astral">Астрал</h3>
             <p class="film_text">
               Джош и Рене переезжают со своими 
@@ -142,7 +146,7 @@
             </p>  
           </div>
           <div class="film">
-            <img src="img/film4.png">
+            <img src="../img/film4.png">
             <h3 class="film_header">Гравитация</h3>
             <p class="film_text">
               Доктор Райан Стоун, блестящий 
@@ -178,7 +182,7 @@
           <div class="line"></div>
         </div>
         <div class="form">
-          <form action="php/index.php" method="POST">
+          <form action="index.php" method="POST">
             <label for="name">Ваше имя <span class="star">*</span></label>
             <div>  
               <input class="input_cell" name="name" id="name" type="text" maxlength="255" required="required" title="Имя" placeholder="Например, Иван">
