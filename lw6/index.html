@@ -25,7 +25,7 @@
         </li>
       </ul>
     </nav>
-    <article>
+    <article>                   <!--Обо мне-->
       <div class="container">
         <a class="anchor_about" name="about_me"></a>
         <div class="about">
@@ -85,7 +85,7 @@
         </div>
       </div>
     </article>
-    <section class="films">
+    <section class="films">     <!--Фильмы-->
       <div class="container">   
         <h2 class="header_loving_movies">Любимые фильмы</h2>
         <a class="anchor_film" name="film"></a>
@@ -178,7 +178,7 @@
           <div class="line"></div>
         </div>
         <div class="form">
-          <form action="#" method="POST">
+          <form action="php/form.php" method="POST">
             <label for="name">Ваше имя <span class="star">*</span></label>
             <div>  
               <input class="input_cell" name="name" id="name" type="text" maxlength="255" required="required" title="Имя" placeholder="Например, Иван">
@@ -204,14 +204,14 @@
             </div>
             <label for="sex">Ваш пол</label>
             <div class="sex">
-              <input name="sex" id="male" type="radio" value="M">
+              <input name="sex" id="male" type="radio" value="male">
               <label for="male">Мужской</label>
-              <input name="sex" id="female" type="radio" value="F">
+              <input name="sex" id="female" type="radio" value="female">
               <label for="female">Женский</label>
             </div>
             <label for="name">Ваше сообщение <span class="star">*</span></label>
             <div>
-              <textarea class="input_cell" name="sms" id="sms" maxlength="1020" title="Сообщение">
+              <textarea class="input_cell" name="sms" id="sms" maxlength="1020" required="required" title="Сообщение">
               </textarea>
             </div>
             <input class="submit" type="submit" value="Отправить">
