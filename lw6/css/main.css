@@ -319,7 +319,6 @@ article
 .form
 {
     width: 542px;
-    height: 730px;
 }
 
 label
@@ -394,8 +393,8 @@ label[for="male"], label[for="female"]
 
 #sms
 {
-    width: 517px;
-    height: 142px;
+    width: 526px;
+    height: 136px;
     border: 2px solid #a6a6a6;
     border-radius: 2px;
     font: 400 20px 'Open Sans';
@@ -428,10 +427,10 @@ body:after
     background: #f5f5f5;
     font-size: 16px;
     text-align: center;
-    line-height: 65px;
+    line-height: 64px;
     height: 70px;
     width: 100%;
-    top: 53px;  
+    top: 50px;  
     left: -10px; 
 }
 
