@@ -10,35 +10,29 @@ div
     box-sizing: border-box;  
 }
 
-.form
+.list
 {
     width: 542px;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
 }
 
-label
+dt
 {
     font: 400 20px 'Open Sans';
 }
 
-.star
+dd
 {
-    color: red;
-}
-
-.email
-{
-    width: 519px;
-    height: 44px;
+    margin: 5px 0 15px 0;
+    padding: 10px 0 10px 17px;
     border: 2px solid #a6a6a6;
     border-radius: 2px;
-    font: 400 20px 'Open Sans';
-    padding-left: 17px;
+    font: 400 20px 'Open Sans';  
 }
 
-.email:focus
+.data
 {
-    border: 2px solid #15a98c; 
+    list-style: none;
 }
 
 .submit
@@ -50,29 +44,5 @@ label
     color: #fff;
     border: none;
     border-radius: 5px;
-    margin: 10px 26%;
+    margin: 0 43%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

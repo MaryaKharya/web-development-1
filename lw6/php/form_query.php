@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Query Message</title>
-    <link href="../css/form_query_message.css" rel="stylesheet">
+    <link href="../css/form_query.css" rel="stylesheet">
   </head>
   <body>
     <div class="form">
