@@ -298,23 +298,31 @@ article
     font: 300 36px 'Open Sans';
     text-transform: uppercase;
     display: inline-block;
-    margin: 0 19px;
+    margin: 40px 244px 66px 244px;
 }
 
-.line
+.text_me:before
 {
+    content: "";
+    display: block;
     background: #c4c4c4;
     width: 200px;
     height: 1px;
     display: inline-block;
-    margin: 12px 0;
+    margin: 12px 27px 12px 0;
 }
 
-.header_text_me
+.text_me:after
 {
-    margin: 40px 0 66px 0;
-    padding: 0 248px;
+    content: "";
+    display: block;
+    background: #c4c4c4;
+    width: 200px;
+    height: 1px;
+    display: inline-block;
+    margin: 12px 0 12px 24px;
 }
+
 
 .form
 {
@@ -364,8 +372,7 @@ input[name="name"], input[name="email"]
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(../img/arrow_down.png) no-repeat;
-    background-position: 498px 18px;
+    background: url(../img/arrow_down.png) no-repeat 498px 18px;
 }
 
 .sex

@@ -1,10 +1,10 @@
 <?php
-  $email = mb_strtolower($_GET['email']);
-  $data = file_get_contents("../data/" . $email . ".txt") ?? null;
-  if (!empty($data));
-  {
+$email = mb_strtolower($_GET['email']);
+$data = file_get_contents("../data/" . $email . ".txt") ?? null;
+if (isset($data)) 
+{
     $array_data = explode("\n", $data);
-  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,18 +18,19 @@
     <div class="list">
       <dl class="data">
         <?php  
-          if (!empty($data))
-          {
-            foreach ($array_data as $value)
+        if (!empty($data)) 
+        {
+            foreach ($array_data as $value) 
             {
-              $array_definition = explode(":", $value);
-              echo "<dt>$array_definition[0]:</dt>";
-              echo "<dd>$array_definition[1]</dd>";
+                $array_definition = explode(":", $value);
+                echo "<dt>$array_definition[0]:</dt>";
+                echo "<dd>$array_definition[1]</dd>";
             }
-          } else
-            {
-              echo "<dd>Данные отправителя не найдены</dd>";
-            }
+        }   
+        else 
+        {
+            echo "<dd>Данные отправителя не найдены</dd>";
+        }
         ?>
       </dl>
     </div>

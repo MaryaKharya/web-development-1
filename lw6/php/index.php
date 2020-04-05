@@ -1,5 +1,5 @@
 <?php
-  include 'textme.php';
+  include 'send_message.php';
 ?>
 
 <!DOCTYPE html>
