@@ -6,29 +6,29 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
+    <nav>                       <!--Меню-->
+      <ul class="menu">
+        <li class="menu_about">
+          <a href="#about_me" class="person_icon icon">
+            Обо мне
+          </a>  
+        </li>
+        <li>
+          <a href="#hobby" class="hobby_icon icon">
+            Мое хобби
+          </a>  
+        </li>
+        <li>
+          <a href="#film" class="video_icon icon">
+            Любимые фильмы
+          </a>  
+        </li>
+      </ul>
+    </nav>
     <article>                   <!--Обо мне-->
       <div class="container">
         <a class="anchor_about" name="about_me"></a>
         <div class="about">
-          <nav>                       <!--Меню-->
-            <ul class="menu">
-              <li class="menu_about">
-                <a href="#about_me" class="person_icon icon">
-                  Обо мне
-                </a>  
-              </li>
-              <li>
-                <a href="#hobby" class="hobby_icon icon">
-                  Мое хобби
-                </a>  
-              </li>
-              <li>
-                <a href="#film" class="video_icon icon">
-                  Любимые фильмы
-                </a>  
-              </li>
-            </ul>
-          </nav>
           <img src="img/photo.png" class="my_photo">
           <div class="name">
             <blockquote class="citation">
@@ -173,33 +173,7 @@
       <a class="anchor_form" name="form"></a>
       <div class="container">
         <h2 class="text_me">Напиши мне</h2>
-        <form class="form" action="php/index.php" method="POST">
-          <label for="name">Ваше имя <span class="star">*</span></label>
-          <input class="input_cell" name="name" id="name" type="text" maxlength="255" required="required" title="Имя" placeholder="Например, Иван"><br>
-          <label for="email">Ваш email <span class="star">*</span></label>
-          <input class="input_cell" name="email" id="email" type="email" maxlength="255" required="required" title="Email" placeholder="Например, Ivan12@mail.ru"><br>
-          <label for="country">Откуда вы?</label>  
-          <select class="input_cell country" name="country" id="country" title="Страна" size="1">
-            <option>Россия</option>
-            <option>Белоруссия</option>
-            <option>Казахстан</option>
-            <option>Украина</option>
-            <option>Армения</option>
-            <option>Азербайджан</option>
-            <option>Киргизия</option>
-            <option>Молдавия</option>
-            <option>Таджикистан</option>
-            <option>Узбекистан</option>
-          </select><br>
-          <label for="sex">Ваш пол</label>
-            <input class="male" name="sex" id="male" type="radio" value="male">
-            <label for="male">Мужской</label>
-            <input class="female" name="sex" id="female" type="radio" value="female">
-            <label for="female">Женский</label>
-          <label for="sms">Ваше сообщение <span class="star">*</span></label>
-          <textarea class="input_cell sms" name="sms" id="sms" maxlength="1020" required="required" title="Сообщение"></textarea><br>
-          <input class="submit" type="submit" value="Отправить">
-        </form>
+        <?php include("php/form.php"); ?>
       </div>
     </section>
   </body>

@@ -1,4 +1,9 @@
 function isPrimeNumber(variable) {
+  const typenumber = 'number';
+  const typearray = 'object';
+  if ( typeof(variable) === typenumber) {
+    variable = [variable];
+  }
   function CheckNumber(num) {
     (num > 1)
     ? prime = true
@@ -9,24 +14,18 @@ function isPrimeNumber(variable) {
         break;
       }
     }
-    if (prime)
+    if (prime) {
       return `Result: ${num} is prime number`;
-    else
+    } else {
       return `Result: ${num} is not prime number`;
-  }
+    }
+  } 
   
-  if (typeof(variable) == 'number')
-    console.log( CheckNumber(variable) );  
-  else if (typeof(variable) == 'object')
-    if (variable.length > 0)
-      for (let number of variable) {
-        if (typeof(number) == 'number')
-          console.log( CheckNumber(number) );
-        else
-          console.log(`"${number}" is not number`); 
-      }
-    else
-      console.log('Input data is invalid or empty');
-  else
-    console.log('Input data is invalid or empty');
+  if (( typeof(variable) != typearray ) || ( variable.some(value => typeof(value) != typenumber) ) || (variable.length < 1)) {
+    console.log('Проверьте введённые данные');
+  } else {
+    for (let number of variable) {
+      console.log( CheckNumber(number) );
+    } 
+  }  
 }

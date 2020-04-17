@@ -10,7 +10,7 @@ body
 
 .container
 {
-    width: 1200px;
+    width: 1400px;
     margin: 0 auto;
     padding: 1px 0;
 }
@@ -244,12 +244,34 @@ article
 .header_loving_movies
 {
     font: 400 36px 'Open Sans';
-    margin: 31px 0 30px 0;    
+    margin: 31px 100px 30px 100px;    
 }
 
 .loving_movies
 {
+    display: inline-block;
+    position: relative;
+    left: 26px;
+}
+
+.carusel
+{
     display: flex;
+    width: 1200px;
+    overflow: hidden;
+}
+
+.arrow_left
+{
+    position: relative;
+    bottom: 55px;
+}
+
+.arrow_right
+{
+    position: relative;
+    bottom: 55px;
+    left: 50px;
 }
 
 .film
@@ -282,7 +304,7 @@ article
     display: block;
     width: 202px;
     padding: 9px;
-    margin: 38px 480px 59px 480px;
+    margin: 38px 580px 59px 580px;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
@@ -299,7 +321,7 @@ article
     font: 300 36px 'Open Sans';
     text-transform: uppercase;
     display: inline-block;
-    margin: 40px 244px 66px 244px;
+    margin: 40px 344px 66px 344px;
 }
 
 .text_me:before
