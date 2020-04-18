@@ -252,31 +252,33 @@ article
     display: inline-block;
     position: relative;
     left: 26px;
+    width: 1200px;
+    overflow: hidden;
 }
 
 .carusel
 {
-    display: flex;
-    width: 1200px;
-    overflow: hidden;
+    display: inline-flex;
+    justify-content: flex-end;
 }
 
 .arrow_left
 {
     position: relative;
-    bottom: 55px;
+    bottom: 655px;
 }
 
 .arrow_right
 {
     position: relative;
-    bottom: 55px;
+    bottom: 655px;
     left: 50px;
 }
 
 .film
 {
     margin-right: 20px;
+    list-style-type: none;
 }
 
 .film_header
@@ -304,7 +306,7 @@ article
     display: block;
     width: 202px;
     padding: 9px;
-    margin: 38px 580px 59px 580px;
+    margin: 28px 580px 59px 580px;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
