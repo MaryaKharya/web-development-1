@@ -253,13 +253,13 @@ article
     position: relative;
     left: 26px;
     width: 1200px;
+    height: 782px;
     overflow: hidden;
 }
 
 .carusel
 {
-    display: inline-flex;
-    justify-content: flex-end;
+    display: flex;
 }
 
 .arrow_left
@@ -275,10 +275,15 @@ article
     left: 50px;
 }
 
+.arrow_left:hover, .arrow_right:hover
+{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 .film
 {
     margin-right: 20px;
-    list-style-type: none;
 }
 
 .film_header

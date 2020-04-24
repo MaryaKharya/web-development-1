@@ -1,39 +1,47 @@
-let carusel = document.getElementById('carusel');
-carusel.style.webkitTransitionDuration = '0.7s';
-let arrowLeft = document.getElementById('arrow_left');
-let arrowRight = document.getElementById('arrow_right');
-let delay = 1000;
-let canPress = true;
+function main() {
+  const width = 305;
+  let offset = -(7 * width);
+  let count = 0;
+  let numberOfClicks = 0;
+  const carusel = document.getElementById('carusel');
+  const arrowLeft = document.getElementById('arrow_left');
+  const arrowRight = document.getElementById('arrow_right');
+  carusel.style.WebkitTransitionDuration = '200ms';
+  arrowLeft.addEventListener("click", handlerArrow);
+  arrowRight.addEventListener("click", handlerArrow);
+  move(null);
 
-function handlerArrowLeft() {
-  if (canPress) {
-    canPress = false;
-    carusel.style.opacity = '0';
-    setTimeout(function() {
-      let left_film = carusel.firstElementChild;
-      carusel.append(left_film);
-      carusel.style.opacity = '1';
-    }, 700);
-    setTimeout(function() {
-      canPress = true;
-    }, delay);
-  };
-};
+  function move(button) {
+    if (button === arrowLeft) {
+      offset -= width;
+      count++;
+    } else if (button === arrowRight) {
+      offset += width;
+      count--;
+    }
+    carusel.style.WebkitTransform = `translateX(${offset}px)`;
+  }
 
-function handlerArrowRight() {
-  if (canPress) {
-    canPress = false;
-    carusel.style.opacity = '0';
-    setTimeout(function() {
-      let right_film = carusel.lastElementChild;
-      carusel.prepend(right_film);
-      carusel.style.opacity = '1';
-    }, 700);
-    setTimeout(function() {
-      canPress = true;
-    }, delay);
-  };
-};
+  function reset() {
+    count = 0;
+    offset = -(7 * width);
+    carusel.style.WebkitTransitionDuration = '0s';
+    move(null);
+    setTimeout(function () {
+      carusel.style.WebkitTransitionDuration = '200ms';
+    }, 20);
+  }
 
-arrowLeft.addEventListener("click", handlerArrowLeft);
-arrowRight.addEventListener("click", handlerArrowRight);
+  function handlerArrow() {
+    numberOfClicks++;
+    if (numberOfClicks === 1) {
+      move(event.target);
+      if ((count >= 7) || (count <= -7)) {
+        setTimeout(reset, 200);
+      }
+      setTimeout(() => numberOfClicks = 0, 230);
+    }
+  }
+}
+
+window.onload = main;

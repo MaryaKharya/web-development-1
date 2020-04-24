@@ -475,6 +475,21 @@ body:after
     bottom: 20px;
 }
 
+.error_messages
+{
+    display: inline-block;
+    margin-left: 20px;
+    color: red;
+    font: 400 16px Arial;
+}
+
+.all_right
+{
+    display: inline-block;
+    margin-left: 20px;
+    color: green;
+    font: 400 16px Arial;
+}
 
 
 

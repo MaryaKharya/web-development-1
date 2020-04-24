@@ -31,8 +31,8 @@ function getForm() {
     {
         $data = "Имя: ${name}\nEmail: ${email}\nСтрана: $country\nПол: $sex\nСообщение: $sms";
         $form = [
-        "data" => $data,
-        "email" => $email,
+            "data" => $data,
+            "email" => $email,
         ];
         return $form;
     }
