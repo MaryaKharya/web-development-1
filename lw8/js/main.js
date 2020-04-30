@@ -1,46 +1,58 @@
+const buttonLeft = 'arrow_left';
+const buttonRight = 'arrow_right';
+const durationOfTransition = '160ms';
+const zero = 0;
+const width = 285;
+const marginRight = 20;
+const number = 'number';
+let numberOfClicks = 0;
+
 function main() {
-  const width = 305;
-  let offset = -(7 * width);
-  let count = 0;
-  let numberOfClicks = 0;
-  const carusel = document.getElementById('carusel');
-  const arrowLeft = document.getElementById('arrow_left');
-  const arrowRight = document.getElementById('arrow_right');
-  carusel.style.WebkitTransitionDuration = '200ms';
+  let arrowLeft = document.getElementById('arrow_left');
+  let arrowRight = document.getElementById('arrow_right');
+  
+  for (let film of carusel.children) {
+    film.style.WebkitTransition = durationOfTransition;
+    changeWidth(film, width);
+  }
   arrowLeft.addEventListener("click", handlerArrow);
   arrowRight.addEventListener("click", handlerArrow);
-  move(null);
+}
 
-  function move(button) {
-    if (button === arrowLeft) {
-      offset -= width;
-      count++;
-    } else if (button === arrowRight) {
-      offset += width;
-      count--;
-    }
-    carusel.style.WebkitTransform = `translateX(${offset}px)`;
+function handlerArrow() {
+  numberOfClicks++;
+  if (numberOfClicks === 1) {
+    move(event.target.name);
+    setTimeout(() => numberOfClicks = 0, 230);
   }
+}
 
-  function reset() {
-    count = 0;
-    offset = -(7 * width);
-    carusel.style.WebkitTransitionDuration = '0s';
-    move(null);
-    setTimeout(function () {
-      carusel.style.WebkitTransitionDuration = '200ms';
-    }, 20);
+function move(button) {
+  if (button === buttonLeft) {
+    let leftFilm = carusel.firstElementChild;
+    changeWidth(leftFilm, zero, zero)
+    setTimeout( () => {
+      carusel.append(leftFilm); 
+      changeWidth(leftFilm, width, marginRight)
+    }, 200);  
+  } else if (button === buttonRight) {
+    let rightFilm = carusel.lastElementChild;
+    rightFilm.style.WebkitTransition = zero;
+    changeWidth(rightFilm, zero, zero);
+    carusel.prepend(rightFilm);
+    rightFilm.style.WebkitTransition = durationOfTransition;
+    setTimeout( () => {
+      changeWidth(rightFilm, width, marginRight)
+    }, 0); 
   }
+}
 
-  function handlerArrow() {
-    numberOfClicks++;
-    if (numberOfClicks === 1) {
-      move(event.target);
-      if ((count >= 7) || (count <= -7)) {
-        setTimeout(reset, 200);
-      }
-      setTimeout(() => numberOfClicks = 0, 230);
-    }
+function changeWidth(elem, width, marginRight) { 
+  if ( typeof(width) === number ) {
+    elem.style.width = `${width}px`;
+  }
+  if ( typeof(marginRight) === number ) {
+    elem.style.marginRight = `${marginRight}px`;
   }
 }
 

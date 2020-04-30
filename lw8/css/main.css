@@ -253,13 +253,14 @@ article
     position: relative;
     left: 26px;
     width: 1200px;
-    height: 782px;
     overflow: hidden;
 }
 
 .carusel
 {
     display: flex;
+    height: 782px;
+    transform: translateX(-905px);
 }
 
 .arrow_left
