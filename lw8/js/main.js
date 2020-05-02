@@ -10,10 +10,8 @@ let numberOfClicks = 0;
 function main() {
   let arrowLeft = document.getElementById('arrow_left');
   let arrowRight = document.getElementById('arrow_right');
-  
   for (let film of carusel.children) {
     film.style.WebkitTransition = durationOfTransition;
-    changeWidth(film, width);
   }
   arrowLeft.addEventListener("click", handlerArrow);
   arrowRight.addEventListener("click", handlerArrow);

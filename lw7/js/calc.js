@@ -1,44 +1,61 @@
 const typenumber = 'number';
-let expression = [];
+const typestring = 'string';
+const endOfSearch = 'the end of the search';
+const searchOperation = 'search for operation';
+const searchOperands = 'search for operands';
+let numberOfOperands = 0;
 
 function calc(string) {
-  if ( string.split('(').length != string.split(')').length ) {
-    console.log('Число открывающих скобок не совпадает с числом закрывающих!');
-  } else {
-    createExpressionArray(string);
-    for(i = 0; i < expression.length; i++) {
-      if ( isNumber(expression[i]) ) {
-        expression[i] = Number(expression[i]);
+  if ( typeof(string) === typestring ) {
+    if ( string.split('(').length != string.split(')').length ) {
+      console.log('Число открывающих скобок не совпадает с числом закрывающих!');
+    } else {
+      let expression = createExpressionArray(string);
+      for(i = 0; i < expression.length; i++) {
+        if ( isNumber(expression[i]) ) {
+          expression[i] = Number(expression[i]);
+        }
+      }
+      let result = doesIteration(expression); 
+      if (result != null) {
+        console.log('Результат: ');
+        console.log(result);
+      } else {
+        console.log('Проверьте правильность введённых данных');
       }
     }
-    let result = main(expression); 
-    if (result != null) {
-      console.log('Результат: ');
-      console.log(result);
-    } else {
-      console.log('Проверьте правильность введённых данных');
-    }
+  } else {
+    console.log('Введите выражение в кавычках');
   }
 }
 
-function main(expression) {
+function doesIteration(expression) {
   let error = false;
   let newExpression = [];
-  let Symbol = null;
+  let runningState = null;
   let operation = null;
   let operand1 = null;
   let operand2 = null;
   let parenthesis = false;
-  let count = 0;
+  numberOfOperands = 0;
   let i = 0;
 
-  isOperation(expression[i]);
-  expression.shift();
+  error = !isOperation(expression[i])
   if (!error) {
+    operation = expression[i];
+    expression.shift();
+    runningState = searchOperands;
     goToMaximumNesting();
-    completingPass();
+    i += 1;
+    if (runningState === endOfSearch) {
+      chekingCloseParenthesis(expression[i], parenthesis, error);
+      calculation(operation, operand1, operand2, newExpression);
+      createNewExpression(newExpression, expression, i);
+    } else {
+      error = true;
+    }
     if ((!error) && (newExpression.length > 1)) {
-      result = main(newExpression);
+      result = doesIteration(newExpression);
     } else if (!error) {
         return newExpression[0];
     } else {
@@ -49,102 +66,84 @@ function main(expression) {
 
   function goToMaximumNesting() {
     for (i; i < expression.length; i++) {
-      if (Symbol === 'operation') {
-        searchOperands(expression[i]);
-        if (Symbol === 'close') {
+      if (runningState === searchOperands) {
+        isOperands(expression[i]);
+        if (runningState === endOfSearch) {
           break;
         }
-      } else if (Symbol === 'open' ) {
-          isOperation(expression[i]);
+      } else if (runningState === searchOperation ) {
+        if ( isOperation(expression[i]) ) {
+          operation = expression[i];
+          runningState = searchOperands;
+        } else {
+          error = true;
+        }
       } 
     }
   }
 
-  function completingPass() {
-    i += 1;
-    if (Symbol === 'close') {
-      chekingCloseParenthesis(expression[i]);
-      calculation(operation, operand1, operand2);
-      createNewExpression();
-      resetVariable();
-    } else {
-      error = true;
-    }
-  }
-
-  function isOperation(symbol) {
-    if ((symbol === '*') || (symbol === '/') || (symbol === '-') || (symbol === '+')) {
-      operation = symbol;
-      Symbol = 'operation';
-    } else {
-      error = true;
-    }
-  }
-  function pushingNewExpression(symbol) {
-    if (parenthesis) {
-      newExpression.push(symbol);
-    } else {
-      parenthesis = true;
-    }
-    if (operation != null) {
-      newExpression.push(operation);
-      operation = null;
-    }
-    if (operand1 != null) {
-      newExpression.push(operand1);
-      operand1 = null;
-      count = 0;
-    }
-  }
-
-  function searchOperands(symbol) {
+  function isOperands(symbol) {
     if (symbol === '(') {
-      pushingNewExpression(symbol);
-      Symbol = 'open'; 
-    } else if ((count === 0) && ( typeof(symbol) === typenumber)) {
+      pushingNewExpression(parenthesis, newExpression, symbol, operation, operand1)
+      runningState = searchOperation; 
+    } else if ((numberOfOperands === 0) && ( typeof(symbol) === typenumber)) {
       operand1 = symbol;
-      count = 1;
-    } else if ((count === 1) && ( typeof(symbol) === typenumber)) {
+      numberOfOperands = 1;
+    } else if ((numberOfOperands === 1) && ( typeof(symbol) === typenumber)) {
       operand2 = symbol;
-      count = 0;
-      Symbol = 'close';
+      numberOfOperands = 0;
+      runningState = endOfSearch;
     } else {
       error = true;
     }
   }
+}
 
-  function calculation(operation, a, b) {
-    if (operation === '+') {
-      newExpression.push(a + b);
-    } else if (operation === '-') {
-      newExpression.push(a - b);  
-    } else if (operation === '*') {
-      newExpression.push(a * b);  
-    } else if (operation === '/') {
-      newExpression.push(a / b);  
-    }
+function pushingNewExpression(parenthesis, newExpression, symbol, operation, operand1) {
+  if (parenthesis) {
+    newExpression.push(symbol);
+  } else {
+    parenthesis = true;
   }
-  function resetVariable() {
-    parenthesis = false;
+  if (operation != null) {
+    newExpression.push(operation);
     operation = null;
+  }
+  if (operand1 != null) {
+    newExpression.push(operand1);
     operand1 = null;
-    operand2 = null;
-    Symbol = null;
+    numberOfOperands = 0;
+  }
+}
+
+function isOperation(symbol) {
+    return ((symbol === '*') || (symbol === '/') || (symbol === '-') || (symbol === '+')) 
   }
 
-  function chekingCloseParenthesis(symbol) {
-    if (parenthesis) {
-      if (symbol != ')') {
-        error = true;
-      }
+function chekingCloseParenthesis(symbol, parenthesis, error) {
+  if (parenthesis) {
+    if (symbol != ')') {
+      error = true;
     }
   }
+}
 
-  function createNewExpression() {
-    i += 1;
-    for (i; i < expression.length; i++) {
-      newExpression.push(expression[i]);
-    }
+function createNewExpression(newExpression, expression, i) {
+  i += 1;
+  for (i; i < expression.length; i++) {
+    newExpression.push(expression[i]);
+  }
+}
+
+function calculation(operation, a, b, newExpression) {
+  if (operation === '+') {
+    newExpression.push(a + b);
+  } else if (operation === '-') {
+    newExpression.push(a - b);  
+  } else if (operation === '*') {
+    newExpression.push(a * b);  
+  } else if (operation === '/') {
+    newExpression.push(a / b);  
   }
 }
 
@@ -156,5 +155,5 @@ function createExpressionArray(string) {
   string = string.replace(/\(/g, ' ( ');
   string = string.replace(/\)/g, ' ) ');
   string = string.replace(/\s+/g, ' ').trim();
-  expression = string.split(' ');
+  return string.split(' ');
 }

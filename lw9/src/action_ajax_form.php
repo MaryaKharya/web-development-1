@@ -1,65 +1,33 @@
 <?php
-$name = null;
-$email = null;
-$country = null;
-$sex = null;
-$sms = null;
-$fields = [];
-$error = false;
-$errorList = [];
-$QUERY = json_decode(file_get_contents('php://input'), true);
-function getParameter($name)
-{
-    global $QUERY;
-    return $QUERY[$name] ?? null;
-}
+$fields = json_decode(file_get_contents('php://input'), true);
 
-function getFields()
+function checkingForValid(array $fields): array
 {
-    global $name, $email, $country, $sex, $sms;
-    $name = getParameter('name');
-    $email = getParameter('email');
-    $country = getParameter('country');
-    $sex = getParameter('sex');
-    $sms = getParameter('sms');
-}
-
-function validateName($name)
-{
-    return preg_match("/^[a-z]+[a-z\s\-]*$/i", $name);
-}
-
-function validateEmail($email)
-{
-    return filter_var($email, FILTER_VALIDATE_EMAIL);
-}
-
-function checkingForValid()
-{
-    global $fields, $errorList, $name, $email, $sms;
-    isset($name) ? ($fields['name'] = $name) : ($errorList[] = 'name');
-    isset($email) ? ($fields['email'] = $email) : ($errorList[] = 'email');
-    isset($sms) ? ($fields['sms'] = $sms) : ($errorList[] = 'sms');
-    if ( count($errorList) === 0)
+    $errorList = [];
+    $validateName = preg_match("/^[a-zа-я]+[a-zа-я\s\-]*$/ui", $fields['name']);
+    $validateEmail = filter_var($fields['email'], FILTER_VALIDATE_EMAIL);
+    $validateMessage = preg_match("/^[a-zа-я\s]+[a-zа-я\s\-.,()!?:;]*$/ui", $fields['message']);
+    if ( !$validateName )
     {
-        validateName($name) ?: ($errorList[] = 'name');
-        validateEmail($email) ?: ($errorList[] = 'email');
-        return (count($errorList) === 0);
+        $errorList[] = 'name';
     }
-    else
+    if (!$validateEmail )
     {
-        return false;
+        $errorList[] = 'email';
     }
+    if (!$validateMessage)
+    {
+        $errorList[] = 'message';
+    }
+    return $errorList;
 }
 
-getFields();
-if ( checkingForValid() )
+$errorList = checkingForValid($fields);
+if ( count($errorList) === 0 )
 {
-    echo json_encode('Всё норм');
+    $data = json_encode($fields, JSON_UNESCAPED_UNICODE);
+    $fileName = strtolower($fields['email']) . '.txt';
+    file_put_contents("../data/${fileName}", $data);
 }
-else
-{
-    global $name, $email;
-    $errorString = implode(', ', $errorList);
-    echo json_encode("Есть ошибка: ${errorString}");
-}
+$errorList = json_encode($errorList);
+echo $errorList;

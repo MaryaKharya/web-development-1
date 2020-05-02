@@ -367,7 +367,8 @@ label
 
 .input_cell:focus
 {
-    border: 2px solid #15a98c; 
+    border-color: #15a98c;
+    outline: none;
 }
 
 .input_cell
@@ -427,13 +428,13 @@ label[for="male"], label[for="female"]
     margin-left: 36px;
 }
 
-label[for="sms"]
+label[for="message"]
 {
     display: block;
     margin: 37px 0 4px 0;
 }
 
-.sms
+.message
 {
     width: 526px;
     height: 136px;
@@ -500,42 +501,20 @@ body:after
     bottom: 20px;
 }
 
+.success_message
+{
+    display: inline-block;
+    position: relative;
+    left: 35px;
+    top: 5px;
+    width: 250px;
+    height: 32px;
+    opacity: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.tick_message
+{
+    display: inline-block;
+    width: 168px;
+    font: 500 15px/1 'Open Sans';
+}

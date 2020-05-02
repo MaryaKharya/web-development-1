@@ -465,16 +465,20 @@
             <option>Киргизия</option>
             <option>Молдавия</option>
             <option>Таджикистан</option>
-            <opion>Узбекистан</opion>
+            <option>Узбекистан</option>
           </select><br>
           <label for="sex">Ваш пол</label>
             <input class="male" name="sex" id="male" type="radio" value="male">
             <label for="male">Мужской</label>
             <input class="female" name="sex" id="female" type="radio" value="female">
             <label for="female">Женский</label>
-          <label for="sms">Ваше сообщение <span class="star">*</span></label>
-          <textarea class="input_cell sms" name="sms" id="sms" maxlength="1020" required="required" title="Сообщение"></textarea><br>
+          <label for="message">Ваше сообщение <span class="star">*</span></label>
+          <textarea class="input_cell message" name="message" id="message" maxlength="1020" required="required" title="Сообщение"></textarea><br>
           <input class="submit" id="submit" type="submit" value="Отправить">
+          <div class="success_message" id="success_message">
+            <img class="tick" src="web/img/tick.png">
+            <span class="tick_message">Ваше сообщение успешно отправлено</span>
+          </div>
         </form>
       </div>
     </section>
