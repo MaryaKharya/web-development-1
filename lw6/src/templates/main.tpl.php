@@ -175,16 +175,22 @@
         <h2 class="text_me">Напиши мне</h2>
         <form class="form" method="POST">
             <label for="name">Ваше имя <span class="star">*</span></label>
+            <?php if (isset($args['name_error_msg'])): ?>
+                <p class="error_messages"><?php echo $args['name_error_msg'] ?></p>
+            <?php endif; ?>
             <input class="input_cell" name="name" id="name" type="text"
-                   <?php echo !isset($args['name']) ?: "value=\"${args['name']}\"" ?>
-                   maxlength="255" required="required" title="Имя" placeholder="Например, Иван"><br>
+                   value="<?php echo $args['name'] ?? ''; ?>"
+                   maxlength="255" title="Имя" placeholder="Например, Иван"><br>
             <label for="email">Ваш email <span class="star">*</span></label>
+            <?php if (isset($args['email_error_msg'])): ?>
+                <p class="error_messages"><?php echo $args['email_error_msg'] ?></p>
+            <?php endif; ?>
             <input class="input_cell" name="email" id="email" type="email"
-                   <?php echo !isset($args['email']) ?: "value=\"${args['email']}\"" ?>
+                   value="<?php echo $args['email'] ?? ''; ?>"
                    maxlength="255" title="Email" placeholder="Например, Ivan12@mail.ru"><br>
             <label for="country">Откуда вы?</label>
             <select class="input_cell country" name="country" id="country" title="Страна" size="1"
-                    <?php echo !isset($args['country']) ?: "value=\"${args['country']}\"" ?>>
+                    value="<?php echo $args['country'] ?? ''; ?>">
                 <option>Россия</option>
                 <option>Белоруссия</option>
                 <option>Казахстан</option>
@@ -200,27 +206,18 @@
             <input class="male" name="sex" id="male" type="radio" value="male">
             <label for="male">Мужской</label>
             <input class="female" name="sex" id="female" type="radio" value="female">
-            <label for="female">Женский</label>
+            <label for="female">Женский</label><br>
             <label for="sms">Ваше сообщение <span class="star">*</span></label>
+            <?php if (isset($args['sms_error_msg'])): ?>
+                <p class="error_messages"><?php echo $args['sms_error_msg'] ?></p>
+            <?php endif; ?>
             <textarea class="input_cell sms" name="sms" id="sms" maxlength="1020" required="required" title="Сообщение">
                 <?php if (isset($args['sms'])): ?>
                     <?php echo $args['sms'] ?>
                 <?php endif; ?>
             </textarea><br>
             <input class="submit" type="submit" value="Отправить">
-            <?php if ($args['error']): ?>
-                <p class="error_messages">
-                    <?php if (isset($args['name_error_msg'])): ?>
-                        <?php echo $args['name_error_msg'] ?>
-                    <?php endif; ?>
-                    <?php if (isset($args['email_error_msg'])): ?>
-                        <?php echo $args['email_error_msg'] ?>
-                    <?php endif; ?>
-                    <?php if (isset($args['sms_error_msg'])): ?>
-                        <?php echo $args['sms_error_msg'] ?>
-                    <?php endif; ?>
-                </p>
-            <?php elseif ($args['all_right']): ?>
+            <?php if ($args['all_right']): ?>
                 <p class="all_right">
                     <?php echo $args['all_right'] ?>
                 </p>

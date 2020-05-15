@@ -18,6 +18,9 @@ async function ajaxQuery() {
 
     const response = await fetch('http://localhost:8080/src/action_ajax_form.php', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
         body: JSON.stringify(fields)
     });
 
