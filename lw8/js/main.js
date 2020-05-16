@@ -9,14 +9,14 @@ const number = 'number';
 let numberOfClicks = 0;
 
 function main() {
-  let arrowLeft = document.getElementById('arrow_left');
-  let arrowRight = document.getElementById('arrow_right');
+  let arrowLeft = document.getElementById(buttonLeft);
+  let arrowRight = document.getElementById(buttonRight);
   let carusel = document.getElementById('carusel');
   for (let film of carusel.children) {
     film.style.WebkitTransition = durationOfTransition;
   }
-  arrowLeft.addEventListener("click", handlerArrow);
-  arrowRight.addEventListener("click", handlerArrow);
+  arrowLeft.addEventListener('click', handlerArrow);
+  arrowRight.addEventListener('click', handlerArrow);
 }
 
 function handlerArrow() {
