@@ -1,6 +1,7 @@
 const buttonLeft = 'arrow_left';
 const buttonRight = 'arrow_right';
 const durationOfTransition = '160ms';
+const timeout = 200;
 const zero = 0;
 const width = 285;
 const marginRight = 20;
@@ -22,7 +23,7 @@ function handlerArrow() {
   numberOfClicks++;
   if (numberOfClicks === 1) {
     move(event.target.name);
-    setTimeout(() => numberOfClicks = 0, 230);
+    setTimeout(() => numberOfClicks = zero, 1.2 * timeout);
   }
 }
 
@@ -33,7 +34,7 @@ function move(button) {
     setTimeout( () => {
       carusel.append(leftFilm); 
       changeWidth(leftFilm, width, marginRight)
-    }, 200);  
+    }, timeout);
   } else if (button === buttonRight) {
     let rightFilm = carusel.lastElementChild;
     rightFilm.style.WebkitTransition = zero;
@@ -42,7 +43,7 @@ function move(button) {
     rightFilm.style.WebkitTransition = durationOfTransition;
     setTimeout( () => {
       changeWidth(rightFilm, width, marginRight)
-    }, 0); 
+    }, zero);
   }
 }
 
