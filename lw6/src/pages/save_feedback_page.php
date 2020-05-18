@@ -36,10 +36,6 @@ function getForm()
         $fields['sex'] = null;
     }
 
-    $test = array_merge($fields, $fieldsInfo);
-
-    file_put_contents('test.txt', "${test}");
-
     if ( !checkParameter($fields, $fieldsInfo) ) {
         renderTemplate('main.tpl.php', array_merge($fields, $fieldsInfo) );
     } else {

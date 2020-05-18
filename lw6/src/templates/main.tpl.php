@@ -180,14 +180,14 @@
             <?php endif; ?>
             <input class="input_cell" name="name" id="name" type="text"
                    value="<?php echo $args['name'] ?? ''; ?>"
-                   maxlength="255" title="Имя" placeholder="Например, Иван"><br>
+                   maxlength="255" title="Имя" placeholder="Например, Иван">
             <label for="email">Ваш email <span class="star">*</span></label>
             <?php if (isset($args['email_error_msg'])): ?>
                 <p class="error_messages"><?php echo $args['email_error_msg'] ?></p>
             <?php endif; ?>
             <input class="input_cell" name="email" id="email" type="email"
                    value="<?php echo $args['email'] ?? ''; ?>"
-                   maxlength="255" title="Email" placeholder="Например, Ivan12@mail.ru"><br>
+                   maxlength="255" title="Email" placeholder="Например, Ivan12@mail.ru">
             <label for="country">Откуда вы?</label>
             <select class="input_cell country" name="country" id="country" title="Страна" size="1"
                     value="<?php echo $args['country'] ?? ''; ?>">
@@ -201,12 +201,12 @@
                 <option>Молдавия</option>
                 <option>Таджикистан</option>
                 <option>Узбекистан</option>
-            </select><br>
+            </select>
             <label for="sex">Ваш пол</label>
             <input class="male" name="sex" id="male" type="radio" value="male">
             <label for="male">Мужской</label>
             <input class="female" name="sex" id="female" type="radio" value="female">
-            <label for="female">Женский</label><br>
+            <label for="female">Женский</label>
             <label for="sms">Ваше сообщение <span class="star">*</span></label>
             <?php if (isset($args['sms_error_msg'])): ?>
                 <p class="error_messages"><?php echo $args['sms_error_msg'] ?></p>
@@ -215,7 +215,7 @@
                 <?php if (isset($args['sms'])): ?>
                     <?php echo $args['sms'] ?>
                 <?php endif; ?>
-            </textarea><br>
+            </textarea>
             <input class="submit" type="submit" value="Отправить">
             <?php if ($args['all_right']): ?>
                 <p class="all_right">

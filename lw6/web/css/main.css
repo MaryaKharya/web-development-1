@@ -305,7 +305,6 @@ article
 .text_me:before
 {
     content: "";
-    display: block;
     background: #c4c4c4;
     width: 200px;
     height: 1px;
@@ -316,7 +315,6 @@ article
 .text_me:after
 {
     content: "";
-    display: block;
     background: #c4c4c4;
     width: 200px;
     height: 1px;
@@ -335,6 +333,11 @@ label
     font: 400 20px 'Open Sans';
 }
 
+label[for="sms"]
+{
+    display: block;
+}
+
 .star
 {
     color: red;
@@ -347,6 +350,7 @@ label
 
 .input_cell
 {
+    display: block;
     margin: 2px 0 25px 1px;
     font: 400 20px 'Open Sans';
     padding-left: 17px;

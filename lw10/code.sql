@@ -21,7 +21,6 @@ CREATE TABLE groups
 (
     id                  INT AUTO_INCREMENT NOT NULL,
     name                VARCHAR(255)       NOT NULL,
-    numberOfStudents    INT                NOT NULL,
     faculty             INT                NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (faculty) REFERENCES faculty (id)
@@ -29,16 +28,16 @@ CREATE TABLE groups
   COLLATE 'utf8mb4_unicode_ci'
   ENGINE = InnoDB;
 
-insert into groups (name, numberOfStudents, faculty) VALUES
-    ('ПС-11', '5', '1'),
-    ('ПС-12', '5', '1'),
-    ('ПС-13', '5', '1'),
-    ('ЮД-11', '5', '2'),
-    ('ЮД-12', '5', '2'),
-    ('ЮД-13', '5', '2'),
-    ('ССО-11', '5', '3'),
-    ('ССО-12', '5', '3'),
-    ('ССО-13', '5', '3');
+insert into groups (name, faculty) VALUES
+    ('ПС-11', '1'),
+    ('ПС-12', '1'),
+    ('ПС-13', '1'),
+    ('ЮД-11', '2'),
+    ('ЮД-12', '2'),
+    ('ЮД-13', '2'),
+    ('ССО-11','3'),
+    ('ССО-12', '3'),
+    ('ССО-13', '3');
 
 CREATE TABLE students
 (
@@ -106,7 +105,7 @@ SELECT
 FROM
     students
 WHERE
-    age > 18;
+    age = 19;
 
 
 SELECT

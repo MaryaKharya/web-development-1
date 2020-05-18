@@ -1,5 +1,5 @@
 async function ajaxQuery() {
-    const radios = document.getElementsByName('sex');
+    let radios = document.getElementsByName('sex');
     resetErrorsOfFields();
     let sex = null;
     for (let i = 0; i < radios.length; i++) {
@@ -8,7 +8,7 @@ async function ajaxQuery() {
             break;
         }
     }
-    const fields = {
+    let fields = {
         'name': document.getElementById('name').value,
         'email': document.getElementById('email').value,
         'country': document.getElementById('country').value,
@@ -16,16 +16,13 @@ async function ajaxQuery() {
         'message': document.getElementById('message').value
     };
 
-    const response = await fetch('http://localhost:8080/src/action_ajax_form.php', {
+    let response = await fetch('/src/action_ajax_form.php', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-        },
         body: JSON.stringify(fields)
     });
 
     if (response.ok) {
-        const answer = await response.json();
+        let answer = await response.json();
         if (answer.length === 0) {
             let successMessage = document.getElementById('success_message');
             successMessage.style.opacity = '1';
