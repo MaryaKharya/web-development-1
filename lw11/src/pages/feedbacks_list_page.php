@@ -5,13 +5,12 @@ function getDataByEmail(string $email): array
 {
     $connection = establishConnection();
     $email = $connection->quote($email);
-    $sqlCheck = 'SELECT EXISTS (SELECT * FROM '.DB_TABLE." WHERE email = ${email}) AS found";
-    $answer = $connection->query($sqlCheck)->fetch();
-    if ($answer['found'])
+    $sql = 'SELECT * FROM '.DB_TABLE." WHERE email = ${email}";
+    $stmt = $connection->query($sql);
+    $answer = $stmt->fetch();
+    if ($answer)
     {
-        $sql = 'SELECT * FROM '.DB_TABLE." WHERE email = ${email}";
-        $stmt = $connection->query($sql);
-        return $stmt->fetch();
+        return $answer;
     }
     return [];
 }
