@@ -8,7 +8,7 @@ function sendSqlQueryInsert(array $form): void
     {
         $field = $connection->quote($field);
     }
-    $sql = 'insert into '.DB_TABLE." (name, email, country, sex, sms) VALUES (${form['name']}, ${form['email']}, ${form['country']}, ${form['sex']}, ${form[sms]})";
+    $sql = 'insert into '.DB_TABLE." (name, email, country, sex, sms) VALUES (${form['name']}, ${form['email']}, ${form['country']}, ${form['sex']}, ${form['sms']})";
     $connection->query($sql);
 }
 
@@ -38,7 +38,6 @@ function getForm()
         'sms' => getParameter('sms'),
         'sex' => getParameter('sex')
     ];
-    $fieldsInfo = [];
     if ($fields['sex'] === 'male') {
         $fields['sex'] = 'Мужской';
     } elseif ($fields['sex'] === 'female') {
@@ -46,6 +45,7 @@ function getForm()
     } else {
         $fields['sex'] = null;
     }
+    $fieldsInfo = [];
 
     if ( !checkParameter($fields, $fieldsInfo) ) {
         renderTemplate('main.tpl.php', array_merge($fields, $fieldsInfo) );

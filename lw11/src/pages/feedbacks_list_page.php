@@ -1,7 +1,7 @@
 <?php
 include '../common.inc.php';
 
-function getDataByEmail($email): array
+function getDataByEmail(string $email): array
 {
     $connection = establishConnection();
     $email = $connection->quote($email);
@@ -9,7 +9,7 @@ function getDataByEmail($email): array
     $answer = $connection->query($sqlCheck)->fetch();
     if ($answer['found'])
     {
-        $sql = 'SELECT * FROM ' . DB_TABLE . " WHERE email = ${email}";
+        $sql = 'SELECT * FROM '.DB_TABLE." WHERE email = ${email}";
         $stmt = $connection->query($sql);
         return $stmt->fetch();
     }
