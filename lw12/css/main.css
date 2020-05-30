@@ -327,7 +327,7 @@ label[for="sms"]
 
 .form
 {
-    max-width: 100%;
+    max-width: 542px;
     margin: 50px auto;
 }
 
@@ -381,6 +381,16 @@ body:after
     {
         width: 89%;
     }
+
+    .country
+    {
+        width: 94%;
+    }
+
+    .sms
+    {
+        width: 92%;
+    }
 }
 
 @media screen and (min-width: 768px)
@@ -430,7 +440,7 @@ body:after
 
     .country
     {
-        width: 91%;
+        width: 94%;
     }
 
     body:after
