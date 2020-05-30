@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+body 
+{
+    font: 400 19px/1.7 Georgia; 
+    padding: 0; 
+    margin: 0; 
+    color: #222222;
+}
+
+.container
+{
+    width: 100%;
+    padding: 0.1% 0;
+}
+
+div
+{
+    box-sizing: border-box;  
+}
+
+nav 
+{
+    display: none;
+}
+
+.my_photo
+{
+    max-width: 100%;
+}
+
+.name
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.citation
+{
+    margin: 5% 0;
+    text-align: center;
+    font: italic 28px/1.2 Georgia;
+}
+
+.author
+{
+    display: block;
+    font: 600 16px/1'Open Sans';
+    margin: 3% 0;
+}
+
+.name_header
+{
+    order: -2;
+    font: 700 48px 'Open Sans';
+    margin: 7% auto;
+}
+
+.rectangle
+{
+    order: -1;
+    background: #45c3aa;
+    border-radius: 10px;
+    width: 60px;
+    height: 6px;
+    margin: 0 auto;
+}
+
+.physic
+{
+    margin: 0 4%;
+}
+
+.header_list
+{
+    font: 600 24px/1.5 'Open Sans';
+    color: #15a98c;
+    margin: 0;
+    text-align: center;
+}
+
+.favorite
+{
+    margin-top: 14%;
+}
+
+.favorite li
+{
+    margin: 14px 0 0 0;
+    font: 19px/1.16 Georgia;
+}
+
+.list_writer
+{
+    padding: 0 0 0 21px;
+    margin-left: 15%;
+}
+
+.list_film
+{
+    padding: 0;
+    margin-left: 15%;
+    list-style: none;
+}
+
+.hobby
+{
+
+}
+
+.hobby_header
+{
+    font: 400 36px 'Open Sans';
+    text-align: center;
+    margin: 14% 0 3%;
+}
+
+.hobby_text
+{
+    margin: 0 4%;
+}
+
+.ref
+{
+    color: #15a98b;
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 14%;
+    font: 400 19px Georgia;
+}
+
+.ref:after
+{
+    content: "→";
+    position: absolute;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.header_loving_movies
+{
+    font: 400 36px/1 'Open Sans';
+    text-align: center;
+    margin-top: 14%;
+    margin-bottom: 15%;
+}
+
+.loving_movies
+{
+    overflow: hidden;
+}
+
+.films
+{
+    background: #f9f9f9;
+}
+
+.carusel
+{
+    display: flex;
+    transform: translateX( calc(100% / 2 - 142.5px - 305px * 4 ) );
+}
+
+.arrow_left, .arrow_right
+{
+    display: none;
+}
+
+/*Удалить для мобильника*/
+.arrow_left:hover, .arrow_right:hover
+{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.film
+{
+    margin-right: 20px;
+    width: 285px;
+}
+
+.film_header
+{
+    font: 700 22px 'Open Sans';
+    margin-top: 14px;
+}
+
+.astral
+{
+    margin-left: 0;
+}
+
+.film_text
+{
+   display: none;
+}
+
+.button
+{
+    background: #45c3aa;
+    color: #fff;
+    display: block;
+    width: 202px;
+    padding: 9px;
+    margin: 5% auto 50px auto;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.text_me
+{
+    font: 300 36px 'Open Sans';
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0;
+}
+
+label
+{
+    margin-left: 5%;
+    font: 400 20px 'Open Sans';
+}
+
+.star
+{
+    color: red;
+}
+
+.input_cell:focus
+{
+    border: 2px solid #15a98c; 
+}
+
+.input_cell
+{
+    display: block;
+    width: 86%;
+    margin: 0 auto 25px;
+    font: 400 20px 'Open Sans';
+    padding-left: 17px;
+}
+
+input[name="name"], input[name="email"]
+{
+    height: 44px;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+}
+
+.country
+{
+    width: 93%;
+    height: 50px;
+    font: 400 18px 'Open Sans';
+    color: #555; 
+    border: 2px solid #a6a6a6;
+    padding-left: 16px;
+    padding-bottom: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../img/arrow_down.png) no-repeat 98% 50%;
+}
+
+label[for="sex"]
+{
+    display: block;
+    margin-bottom: 8px;
+}
+
+label[for="male"], label[for="female"]
+{
+    font: 400 18px 'Open Sans';
+}
+
+.sex
+{
+    margin-left: 5%;
+    margin-bottom: 25px;
+}
+
+.male
+{
+    position: relative;
+    top: 1px;
+    margin: 0 4px 0 1px;
+}
+
+.female
+{
+    position: relative;
+    top: 1px;
+    margin-left: 36px;
+}
+
+label[for="sms"]
+{
+    display: block;
+}
+
+.sms
+{
+    width: 90.5%;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+    font: 400 20px 'Open Sans';
+    padding: 5px;
+}
+
+.submit
+{
+    display: block;
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    font: 400 19px Georgia;
+    line-height: 50px;
+    background: #15a98c;
+    border-radius: 5px;
+    margin: 15px auto;
+    border: none;
+}
+
+.form
+{
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+body:after
+{
+    content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
+    display: block;
+    background: #f5f5f5;
+    font-size: 16px;
+    text-align: center;
+}
+
+.anchor_about
+{
+    position: relative;
+    top: 150px;
+}
+
+.anchor_hobby
+{
+    position: relative;
+    top: 200px;
+}
+
+.anchor_film
+{
+    position: relative;
+    top: 300px;
+}
+
+.anchor_form
+{
+    position: relative;
+    top: 48px;
+}
+
+@media screen and (min-width: 480px)
+{
+    .my_photo
+    {
+        display: block;
+        margin: 10% auto 0 auto;
+    }
+
+    .list_writer, .list_film
+    {
+        margin-left: 30%;
+    }
+
+    input[name="name"], input[name="email"]
+    {
+        width: 89%;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    article
+    {
+        background: url(../img//background.png) no-repeat center -5%;
+    }
+
+    .favorite
+    {
+        display: inline-block;
+        margin-top: 5%;
+    }
+
+    .writers
+    {
+        margin-left: 15%;
+    }
+
+    .movies
+    {
+        float: right;
+        margin-right: 15%;
+    }
+
+    .list_writer, .list_film
+    {
+        margin-left: 5%;
+    }
+
+    .hobby_header
+    {
+        margin-top: 5%;
+    }
+
+    .ref
+    {
+        margin-bottom: 8%;
+    }
+
+    .header_loving_movies
+    {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .country
+    {
+        width: 91%;
+    }
+
+    body:after
+    {
+        content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
+        display: block;
+        background: #f5f5f5;
+        height: 70px;
+        line-height: 70px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    .about
+    {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    nav
+    {
+        display: block;
+        position: fixed;
+        z-index: 1;
+        margin: 0 5%;
+    }
+
+    nav:before
+    {
+        content: "";
+        display: block;
+        height: 50px;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .menu
+    {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 50px;
+    }
+
+    .menu li
+    {
+        float: left;
+    }
+
+    .menu_about
+    {
+        background: #15a98c;
+        position: relative;
+        bottom: 1px;
+    }
+
+    .icon
+    {
+        color: #000;
+        display: block;
+        height: 48.5px;
+        padding: 0 21px 0 30px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 19px;
+        line-height: 50px;
+    }
+
+    .person_icon
+    {
+        background: url(../img/about_me_icon.png) no-repeat 6px 16px;
+        color: #fff;
+        margin: 1px 0 0 15px;
+    }
+
+    .hobby_icon
+    {
+        background: url(../img/hobby_icon.png) no-repeat 12px 17px;
+        margin: 1px 0 0 8px;
+        padding-left: 39px;
+    }
+
+    .video_icon
+    {
+        background: url(../img/video_icon.png) no-repeat 12px 16px;
+        margin: 1px 0 0 7px;
+        padding-left: 38px;
+    }
+
+    .my_photo
+    {
+        display: inline;
+        margin: 15% 5% 0 5%;
+    }
+
+    .name
+    {
+        display: block;
+        float: right;
+        width: 50%;
+        margin: 23% 5% 0 0;
+    }
+
+    .citation
+    {
+        color: #fff;
+        text-align: left;
+        width: 100%;
+    }
+
+    .rectangle
+    {
+        display: inline-block;
+    }
+
+    .name_header
+    {
+        display: block;
+        font: 700 48px 'Open Sans';
+        margin: 7% auto 0;
+    }
+
+    .rectangle
+    {
+        order: 0;
+        background: #45c3aa;
+        border-radius: 10px;
+        width: 60px;
+        height: 6px;
+        margin: 0 auto;
+    }
+
+    .physic
+    {
+        width: 50%;
+        float: right;
+        margin: 0 5% 7% 1%;
+    }
+
+    .header_list
+    {
+        text-align: left;
+    }
+
+    .writers
+    {
+        display: block;
+        float: left;
+        margin-left: 5%;
+    }
+
+    .movies
+    {
+        display: block;
+        float: left;
+        margin: 3% 0 0 5%;
+    }
+
+    .hobby_header
+    {
+        text-align: left;
+        margin: 0;
+        position: relative;
+        bottom: 10px;
+        right: 2px;
+    }
+
+    .hobby
+    {
+        width: 50%;
+        float: right;
+        margin: 0 5% 6% 1%;
+    }
+
+    .hobby_text
+    {
+        margin: 0 0 7% 0;
+    }
+
+    .ref
+    {
+        float: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
