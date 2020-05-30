@@ -26,7 +26,9 @@ nav
 
 .my_photo
 {
+    display: block;
     max-width: 100%;
+    margin: 10% auto 0 auto;
 }
 
 .name
@@ -366,10 +368,9 @@ body:after
 
 @media screen and (min-width: 480px)
 {
-    .my_photo
+    article
     {
-        display: block;
-        margin: 10% auto 0 auto;
+        background: url(../img//background.png) no-repeat center -5%;
     }
 
     .list_writer, .list_film
@@ -395,11 +396,6 @@ body:after
 
 @media screen and (min-width: 768px)
 {
-    article
-    {
-        background: url(../img//background.png) no-repeat center -5%;
-    }
-
     .favorite
     {
         display: inline-block;
