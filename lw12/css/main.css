@@ -39,7 +39,7 @@ nav
 
 .citation
 {
-    margin: 5% 0;
+    margin: 24px 0;
     text-align: center;
     font: italic 28px/1.2 Georgia;
 }
@@ -48,14 +48,14 @@ nav
 {
     display: block;
     font: 600 16px/1'Open Sans';
-    margin: 3% 0;
+    margin: 14px 0;
 }
 
 .name_header
 {
     order: -2;
     font: 700 48px 'Open Sans';
-    margin: 7% auto;
+    margin: 34px auto;
 }
 
 .rectangle
@@ -83,25 +83,25 @@ nav
 
 .favorite
 {
-    margin-top: 14%;
+    margin-top: 40px;
 }
 
 .favorite li
 {
-    margin: 14px 0 0 0;
+    margin: 5% 0 0 0;
     font: 19px/1.16 Georgia;
 }
 
 .list_writer
 {
     padding: 0 0 0 21px;
-    margin-left: 15%;
+    margin-left: calc( (100% - 220px) / 2 );
 }
 
 .list_film
 {
     padding: 0;
-    margin-left: 15%;
+    margin-left: calc( (100% - 220px) / 2 );
     list-style: none;
 }
 
@@ -114,7 +114,7 @@ nav
 {
     font: 400 36px 'Open Sans';
     text-align: center;
-    margin: 14% 0 3%;
+    margin: 40px 0 14px;
 }
 
 .hobby_text
@@ -127,7 +127,7 @@ nav
     color: #15a98b;
     float: right;
     margin-right: 20%;
-    margin-bottom: 14%;
+    margin-bottom: 40px;
     font: 400 19px Georgia;
 }
 
@@ -146,8 +146,8 @@ nav
 {
     font: 400 36px/1 'Open Sans';
     text-align: center;
-    margin-top: 14%;
-    margin-bottom: 15%;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .loving_movies
@@ -207,7 +207,7 @@ nav
     display: block;
     width: 202px;
     padding: 9px;
-    margin: 5% auto 50px auto;
+    margin: 20px auto 50px auto;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
@@ -218,7 +218,7 @@ nav
     font: 300 36px 'Open Sans';
     text-transform: uppercase;
     text-align: center;
-    margin: 50px 0;
+    margin: 35px 0 25px;
 }
 
 label
@@ -268,21 +268,26 @@ input[name="name"], input[name="email"]
     background: url(../img/arrow_down.png) no-repeat 98% 50%;
 }
 
-label[for="sex"]
+label[for='sex']
 {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
-label[for="male"], label[for="female"]
+label[for='male'], label[for='female']
 {
     font: 400 18px 'Open Sans';
+}
+
+label[for='sms']
+{
+    margin-bottom: 5px;
 }
 
 .sex
 {
     margin-left: 5%;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
 }
 
 .male
@@ -330,7 +335,7 @@ label[for="sms"]
 .form
 {
     max-width: 542px;
-    margin: 50px auto;
+    margin: 0 auto 60px;
 }
 
 body:after
@@ -363,7 +368,7 @@ body:after
 .anchor_form
 {
     position: relative;
-    top: 48px;
+    top: 30px;
 }
 
 @media screen and (min-width: 480px)
@@ -371,11 +376,6 @@ body:after
     article
     {
         background: url(../img//background.png) no-repeat center -5%;
-    }
-
-    .list_writer, .list_film
-    {
-        margin-left: 30%;
     }
 
     input[name="name"], input[name="email"]
@@ -416,22 +416,6 @@ body:after
     .list_writer, .list_film
     {
         margin-left: 5%;
-    }
-
-    .hobby_header
-    {
-        margin-top: 5%;
-    }
-
-    .ref
-    {
-        margin-bottom: 8%;
-    }
-
-    .header_loving_movies
-    {
-        margin-top: 5%;
-        margin-bottom: 5%;
     }
 
     .country
