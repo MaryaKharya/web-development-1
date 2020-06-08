@@ -6,31 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet">
     <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
   </head>
   <body>
     <article>                   <!--Обо мне-->
       <div class="container">
-        <a class="anchor_about" name="about_me"></a>
         <div class="about">
-          <nav>                       <!--Меню-->
-            <ul class="menu">
-              <li class="menu_about">
+          <div class="burger">
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+          </div>
+          <div class="nav"> <!--Меню-->
+            <div class="menu">
                 <a href="#about_me" class="person_icon icon">
+                  <img class="person_icon_img" src="img/about_me_icon.png">
                   Обо мне
-                </a>  
-              </li>
-              <li>
+                </a>
                 <a href="#hobby" class="hobby_icon icon">
+                  <img class="hobby_icon_img" src="img/hobby_icon.png">
                   Мое хобби
-                </a>  
-              </li>
-              <li>
+                </a>
                 <a href="#film" class="video_icon icon">
+                  <img class="video_icon_img" src="img/video_icon.png">
                   Любимые фильмы
-                </a>  
-              </li>
-            </ul>
-          </nav>
+                </a>
+            </div>
+          </div>
+          <a class="anchor_about anchor" name="about_me"></a>
           <img src="img/photo.png" class="my_photo">
           <div class="name">
             <blockquote class="citation">
@@ -69,11 +72,11 @@
               <li>4. Гравитация</li>
             </ul>
           </div>
-          <a class="anchor_hobby" name="hobby"></a>
           <div class="hobby">
             <h2 class="hobby_header">
               Мое хобби
             </h2>
+            <a class="anchor_hobby anchor" name="hobby"></a>
             <p class="hobby_text">
               Он регулярно посещал вечерние лекции местного профессора
               и, разумеется, всегда засыпал на самом интересном месте.<br>     
@@ -90,7 +93,7 @@
     <section class="films">     <!--Фильмы-->
       <div class="container">   
         <h2 class="header_loving_movies">Любимые фильмы</h2>
-        <a class="anchor_film" name="film"></a>
+        <a class="anchor_film anchor" name="film"></a>
         <img class="arrow_left" id="arrow_left" name="arrow_left" src="img/arrow_left.png">
         <div class="loving_movies">
           <div class="carusel" id="carusel">
@@ -288,7 +291,7 @@
       </div>
     </section>
     <section>                   <!--Напиши мне-->
-      <a class="anchor_form" name="form"></a>
+      <a class="anchor_form anchor" name="form"></a>
       <div class="container">
         <h2 class="text_me">Напиши мне</h2>
         <form class="form" action="php/index.php" method="POST">

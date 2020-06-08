@@ -5,7 +5,6 @@ const zero = 0;
 const width = 285;
 const number = 'number';
 const marginRight = 20;
-let initialDisplacement = 'translateX(-106%)';
 let durationOfTransition = '160ms';
 let numberOfClicks = 0;
 
@@ -61,27 +60,37 @@ function changeWidth(elem, width, marginRight) {
   }
 }
 
-function autoCarusel() {
-  setTimeout( () => {
-    move(buttonRight);
-    autoCarusel();
-  }, 5000)
+// function autoCarusel() {
+//   setTimeout( () => {
+//     move(buttonRight);
+//     autoCarusel();
+//   }, 5000)
+// }
+
+function showMenu() {
+  let burger = document.querySelector('.burger');
+  let nav = document.querySelector('.nav');
+  burger.classList.toggle('active');
+  nav.classList.toggle('active');
 }
 
 function run() {
-  if ( (screen.width >= 320) && (screen.width < 480) ) {
-    durationOfTransition = '1000ms';
-    addMovieFlippingTime(durationOfTransition)
-    autoCarusel();
-  } else if ( (screen.width >= 480) && (screen.width < 768) ) {
-    durationOfTransition = '1000ms';
-    addMovieFlippingTime(durationOfTransition)
-    autoCarusel();
-  } else if ((screen.width >= 768) && (screen.width < 1366)) {
-    durationOfTransition = '1000ms';
-    addMovieFlippingTime(durationOfTransition)
-    autoCarusel();
+  let nav = document.querySelector('.nav');
+  nav.classList.toggle('transition');
+  if (screen.width < 1024) {
+    let burger = document.querySelector('.burger');
+    burger.addEventListener('click', showMenu);
+    burger.classList.toggle('transition');
+    nav.addEventListener('click', showMenu);
+    //Запускаем свайп-слайдер
   } else {
+    window.addEventListener('scroll', function () {
+      if (pageYOffset >= 40) {
+        nav.classList.add('hidden')
+      } else {
+        nav.classList.remove('hidden')
+      }
+    })
     main();
   }
 }
