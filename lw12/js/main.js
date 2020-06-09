@@ -7,6 +7,7 @@ const number = 'number';
 const marginRight = 20;
 let durationOfTransition = '160ms';
 let numberOfClicks = 0;
+let toggleForDescriptions = 0;
 
 function main() {
   let arrowLeft = document.getElementById(buttonLeft);
@@ -60,12 +61,29 @@ function changeWidth(elem, width, marginRight) {
   }
 }
 
-// function autoCarusel() {
-//   setTimeout( () => {
-//     move(buttonRight);
-//     autoCarusel();
-//   }, 5000)
-// }
+function mainForMobile() {
+  let toggles = document.querySelectorAll('.toggle_description');
+  for (toggle of toggles) {
+    toggle.addEventListener('click', toggleFilmDescription);
+  }
+  //Запускаем свайп-слайдер..
+}
+
+function toggleFilmDescription(e) {
+  let descriptions = document.querySelectorAll('.film_text');
+  for (description of descriptions) {
+    description.classList.toggle('active');
+  }
+  if (toggleForDescriptions === 0) {
+    e.target.innerHTML = 'Скрыть';
+    toggleForDescriptions = 1;
+    //При нажатии фиксировать pageYOffset
+  } else {
+    e.target.innerHTML = 'Подробнее';
+    toggleForDescriptions = 0;
+    //При нажатии фиксировать pageYOffset
+  }
+}
 
 function showMenu() {
   let burger = document.querySelector('.burger');
@@ -82,7 +100,7 @@ function run() {
     burger.addEventListener('click', showMenu);
     burger.classList.toggle('transition');
     nav.addEventListener('click', showMenu);
-    //Запускаем свайп-слайдер
+    mainForMobile();
   } else {
     window.addEventListener('scroll', function () {
       if (pageYOffset >= 40) {

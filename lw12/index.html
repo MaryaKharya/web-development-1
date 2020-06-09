@@ -100,7 +100,7 @@
             <div class="film" id="film1">
               <img src="img/film1.png">
               <h3 class="film_header">Побег из Шоушенка</h3>
-              <p class="film_text">
+              <p class="film_text film2_text">
                 Успешный банкир Энди Дюфрейн 
                 обвинен в убийстве собственной 
                 жены и ее любовника. Оказавшись в 
@@ -120,7 +120,7 @@
             <div class="film" id="film2">
               <img src="img/film2.png">
               <h3 class="film_header">Наркоз</h3>
-              <p class="film_text">
+              <p class="film_text film2_text">
                 Клай Бересфорд вынужден лечь под 
                 нож. Однако в процессе операции на 
                 сердце он неожиданно приходит в 
@@ -129,12 +129,12 @@
                 пошевелить ни рукой, ни ногой, он, 
                 тем не менее, чувствует каждое 
                 касание скальпеля к своей плоти…
-              </p>    
+              </p>
             </div>
             <div class="film" id="film3">
               <img src="img/film3.png">
               <h3 class="film_header astral">Астрал</h3>
-              <p class="film_text">
+              <p class="film_text film3_text">
                 Джош и Рене переезжают со своими 
                 детьми в новый дом, но не успевают 
                 толком распаковать вещи, как 
@@ -146,12 +146,12 @@
                 десятилетний сын Далтон впадает в 
                 кому. Все усилия врачей в больнице 
                 помочь мальчику безуспешны.
-              </p>  
+              </p>
             </div>
             <div class="film" id="film4">
               <img src="img/film4.png">
               <h3 class="film_header">Гравитация</h3>
-              <p class="film_text">
+              <p class="film_text film4_text">
                 Доктор Райан Стоун, блестящий 
                 специалист в области медицинского 
                 инжиниринга, отправляется в свою 
@@ -175,7 +175,7 @@
             <div class="film" id="film5">
               <img src="img/film5.png">
               <h3 class="film_header">Тайная жизнь д.ж.</h3>
-              <p class="film_text">
+              <p class="film_text film5_text">
                 Чем же питомцы занимаются в 
                 свободное время, когда их хозяева 
                 уходят на работу? Оставшись одни, 
@@ -194,7 +194,7 @@
             <div class="film" id="film6">
               <img src="img/film6.png">
               <h3 class="film_header">Форсаж</h3>
-              <p class="film_text">
+              <p class="film_text film6_text">
                 Серия американских фильмов в 
                 жанре экшн. В центре сюжета 
                 фильмов - незаконные гонки, 
@@ -206,12 +206,12 @@
                 невероятные стратегические планы 
                 по решению возникших на их пути 
                 трудностей! 
-              </p>    
+              </p>
             </div>
             <div class="film" id="film7">
               <img src="img/film7.png">
               <h3 class="film_header astral">Эффект бабочки</h3>
-              <p class="film_text">
+              <p class="film_text film7_text">
                 Мальчик Эван перенял от своего 
                 отца-психопата, ныне запертого в 
                 доме для умалишённых, странную 
@@ -225,12 +225,12 @@
                 детстве по совету врача, Эван может 
                 возвращаться в детство и своими 
                 действиями менять будущее.
-              </p>  
+              </p>
             </div>
             <div class="film" id="film8">
               <img src="img/film8.png">
               <h3 class="film_header">Мальчишник в Вегасе</h3>
-              <p class="film_text">
+              <p class="film_text film8_text">
                 Они мечтали устроить незабываемый 
                 мальчишник в Вегасе. Но теперь им 
                 необходимо вспомнить, что именно 
@@ -250,7 +250,7 @@
             <div class="film" id="film9"> 
               <img src="img/film9.png">
               <h3 class="film_header">Superнянь</h3>
-              <p class="film_text">
+              <p class="film_text film9_text">
                 Клэр и Марк уезжают на все 
                 выходные со спокойной душой, ведь 
                 они оставили своего малолетнего 
@@ -269,7 +269,7 @@
             <div class="film" id="film10">
               <img src="img/film10.png">
               <h3 class="film_header">3м. над уровнем неба</h3>
-              <p class="film_text">
+              <p class="film_text film10_text">
                 История двух молодых людей, 
                 которые принадлежат к разным 
                 мирам. Баби ― богатая девушка, 
@@ -282,11 +282,14 @@
                 встреча неизбежна, и в этом 
                 неистовом путешествии между ними 
                 возникает первая большая любовь.
-              </p>    
+              </p>
             </div>
           </div>
         </div>
         <img class="arrow_right" id="arrow_right" name="arrow_right" src="img/arrow_right.png">
+        <div class="toggle_description_block">
+          <span class="toggle_description">Подробнее</span>
+        </div>
         <a href="#" class="button">Все фильмы</a>
       </div>
     </section>
@@ -313,7 +316,7 @@
             <option>Узбекистан</option>
           </select>
           <label for="sex">Ваш пол</label>
-          <div class="sex">
+          <div class="sex" id="sex">
             <input class="male" name="sex" id="male" type="radio" value="male">
             <label for="male">Мужской</label>
             <input class="female" name="sex" id="female" type="radio" value="female">
@@ -325,5 +328,10 @@
         </form>
       </div>
     </section>
+    <footer>
+      <div class="footer">
+        © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
+      </div>
+    </footer>
   </body>
 </html>

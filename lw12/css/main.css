@@ -2,7 +2,7 @@
 
 body 
 {
-    font: 400 19px/1.7 Georgia; 
+    font: 400 21px/1.7 Georgia;
     padding: 0; 
     margin: 0; 
     color: #222222;
@@ -21,6 +21,7 @@ div
 
 .nav
 {
+    visibility: hidden;
     width: 100%;
     position: absolute;
     opacity: 0;
@@ -29,12 +30,13 @@ div
 
 .transition
 {
-    transition: all 1000ms ease 0s;
+    transition: all 500ms ease 0s;
 }
 
 .nav.active
 {
-    opacity: 1;
+   visibility: visible;
+   opacity: 1;
 }
 
 .menu
@@ -154,7 +156,7 @@ div
 
 .citation
 {
-    margin: 24px 0;
+    margin: 24px 5%;
     text-align: center;
     font: italic 28px/1.2 Georgia;
 }
@@ -185,7 +187,7 @@ div
 
 .physic
 {
-    margin: 0 4%;
+    margin: 0 5%;
 }
 
 .header_list
@@ -204,7 +206,7 @@ div
 .favorite li
 {
     margin: 5% 0 0 0;
-    font: 19px/1.16 Georgia;
+    font: 21px/1.16 Georgia;
 }
 
 .list_writer
@@ -234,22 +236,22 @@ div
 
 .hobby_text
 {
-    margin: 0 4%;
+    margin: 0 5%;
 }
 
 .ref
 {
     color: #15a98b;
-    float: right;
-    margin-right: 20%;
-    margin-bottom: 40px;
-    font: 400 19px Georgia;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 40px 0;
+    font: 400 21px Georgia;
 }
 
 .ref:after
 {
     content: "→";
-    position: absolute;
 }
 
 .clear
@@ -312,7 +314,30 @@ div
 
 .film_text
 {
-   display: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.film_text.active
+{
+    -webkit-line-clamp: initial;
+}
+
+.toggle_description_block
+{
+    display: flex;
+    justify-content: center;
+}
+
+.toggle_description
+{
+    color: dodgerblue;
+    font-size: 18px;
+    text-decoration: underline;
 }
 
 .button
@@ -338,8 +363,8 @@ div
 
 label
 {
-    margin-left: 5%;
-    font: 400 20px 'Open Sans';
+    font: 400 21px 'Open Sans';
+    margin-bottom: 5px;
 }
 
 .star
@@ -354,11 +379,13 @@ label
 
 .input_cell
 {
+    box-sizing: border-box;
     display: block;
-    width: 86%;
-    margin: 0 auto 25px;
-    font: 400 20px 'Open Sans';
-    padding-left: 17px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font: 400 21px 'Open Sans';
+    padding-left: 3%;
 }
 
 input[name="name"], input[name="email"]
@@ -370,13 +397,10 @@ input[name="name"], input[name="email"]
 
 .country
 {
-    width: 93%;
     height: 50px;
-    font: 400 18px 'Open Sans';
     color: #555; 
     border: 2px solid #a6a6a6;
-    padding-left: 16px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -386,27 +410,29 @@ input[name="name"], input[name="email"]
 label[for='sex']
 {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 label[for='male'], label[for='female']
 {
-    font: 400 18px 'Open Sans';
+    font: 400 20px 'Open Sans';
 }
 
 label[for='sms']
 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 21px;
 }
 
 .sex
 {
-    margin-left: 5%;
     margin-bottom: 17px;
 }
 
 .male
 {
+    width: 18px;
+    height: 18px;
     position: relative;
     top: 1px;
     margin: 0 4px 0 1px;
@@ -414,6 +440,8 @@ label[for='sms']
 
 .female
 {
+    width: 18px;
+    height: 18px;
     position: relative;
     top: 1px;
     margin-left: 36px;
@@ -426,7 +454,6 @@ label[for="sms"]
 
 .sms
 {
-    width: 90.5%;
     border: 2px solid #a6a6a6;
     border-radius: 2px;
     font: 400 20px 'Open Sans';
@@ -439,7 +466,7 @@ label[for="sms"]
     width: 220px;
     height: 50px;
     color: #fff;
-    font: 400 19px Georgia;
+    font: 400 21px Georgia;
     line-height: 50px;
     background: #15a98c;
     border-radius: 5px;
@@ -449,17 +476,16 @@ label[for="sms"]
 
 .form
 {
-    max-width: 542px;
+    max-width: 90%;
     margin: 0 auto 60px;
 }
 
-body:after
+.footer
 {
-    content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
-    display: block;
     background: #f5f5f5;
-    font-size: 16px;
+    font: 400 19px/1.4 Georgia;
     text-align: center;
+    padding: 15px 5%;
 }
 
 .anchor_hobby
@@ -485,21 +511,6 @@ body:after
     article
     {
         background: url(../img/background.png) no-repeat center -5%;
-    }
-
-    input[name="name"], input[name="email"]
-    {
-        width: 89%;
-    }
-
-    .country
-    {
-        width: 94%;
-    }
-
-    .sms
-    {
-        width: 92%;
     }
 }
 
@@ -527,20 +538,16 @@ body:after
         margin-left: 5%;
     }
 
-    .country
+    .form
     {
-        width: 94%;
+        width: 542px;
     }
 
-    body:after
+    .footer
     {
-        content:"© 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»";
-        display: block;
-        background: #f5f5f5;
+        padding: 0;
         height: 70px;
         line-height: 70px;
-        font-size: 16px;
-        text-align: center;
     }
 }
 
@@ -564,16 +571,19 @@ body:after
         z-index: 1;
         margin: 0 48px;
         top: 0;
+        visibility: visible;
         opacity: 1;
     }
 
     .nav.hidden
     {
+        visibility: hidden;
         opacity: 0;
     }
 
     .nav:hover
     {
+        visibility: visible;
         opacity: 1;
     }
 
@@ -617,7 +627,7 @@ body:after
         padding: 0 21px 0 25px;
         text-decoration: none;
         text-align: center;
-        font-size: 19px;
+        font-size: 21px;
         line-height: 50px;
     }
 
@@ -656,6 +666,7 @@ body:after
         color: #fff;
         text-align: left;
         width: 100%;
+        margin: 24px 0;
     }
 
     .rectangle
@@ -725,11 +736,6 @@ body:after
     .hobby_text
     {
         margin: 0 0 7% 0;
-    }
-
-    .ref
-    {
-        float: none;
     }
 }
 
