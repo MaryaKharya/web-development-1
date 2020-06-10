@@ -8,6 +8,7 @@ const marginRight = 20;
 let durationOfTransition = '160ms';
 let numberOfClicks = 0;
 let toggleForDescriptions = 0;
+let bottomDistance = 0;
 
 function main() {
   let arrowLeft = document.getElementById(buttonLeft);
@@ -66,22 +67,25 @@ function mainForMobile() {
   for (toggle of toggles) {
     toggle.addEventListener('click', toggleFilmDescription);
   }
-  //Запускаем свайп-слайдер..
+  swipeSlider();
 }
 
 function toggleFilmDescription(e) {
+  let body = document.body;
   let descriptions = document.querySelectorAll('.film_text');
+  let carusel = document.getElementById('carusel');
+  bottomDistance = body.scrollHeight - pageYOffset;
+  carusel.classList.toggle('auto_height');
   for (description of descriptions) {
     description.classList.toggle('active');
   }
   if (toggleForDescriptions === 0) {
     e.target.innerHTML = 'Скрыть';
     toggleForDescriptions = 1;
-    //При нажатии фиксировать pageYOffset
   } else {
     e.target.innerHTML = 'Подробнее';
+    window.scrollTo(pageXOffset, body.scrollHeight - bottomDistance);
     toggleForDescriptions = 0;
-    //При нажатии фиксировать pageYOffset
   }
 }
 

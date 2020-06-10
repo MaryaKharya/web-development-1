@@ -281,6 +281,12 @@ div
 {
     display: flex;
     transform: translateX( calc(100% / 2 - 142.5px - 305px * 4 ) );
+    max-height: 372px;
+}
+
+.carusel.auto_height
+{
+    max-height: none;
 }
 
 .arrow_left, .arrow_right
