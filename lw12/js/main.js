@@ -62,17 +62,16 @@ function changeWidth(elem, width, marginRight) {
   }
 }
 
-function mainForMobile() {
+function addEventToggleDescription() {
   let toggles = document.querySelectorAll('.toggle_description');
   for (toggle of toggles) {
     toggle.addEventListener('click', toggleFilmDescription);
   }
-  swipeSlider();
 }
 
 function toggleFilmDescription(e) {
   let body = document.body;
-  let descriptions = document.querySelectorAll('.film_text');
+  let descriptions = document.querySelectorAll('.film_text, .gradient');
   let carusel = document.getElementById('carusel');
   bottomDistance = body.scrollHeight - pageYOffset;
   carusel.classList.toggle('auto_height');
@@ -104,8 +103,12 @@ function run() {
     burger.addEventListener('click', showMenu);
     burger.classList.toggle('transition');
     nav.addEventListener('click', showMenu);
-    mainForMobile();
+    addEventToggleDescription();
+    swipeSlider();
   } else {
+    if (screen.width < 1600) {
+      addEventToggleDescription();
+    }
     window.addEventListener('scroll', function () {
       if (pageYOffset >= 40) {
         nav.classList.add('hidden')

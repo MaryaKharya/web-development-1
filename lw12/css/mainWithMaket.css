@@ -255,6 +255,9 @@ div
 .ref:after
 {
     content: "→";
+    position: absolute;
+    left: 21.6%;
+    top: 3%;
 }
 
 .clear
@@ -816,7 +819,7 @@ label[for="sms"]
     article
     {
         background: url(../img/background.png) no-repeat center 0;
-        background-size: auto 446px;
+        background-size: 112.4%;
     }
 
     .menu, .nav:before
@@ -929,25 +932,18 @@ label[for="sms"]
         margin: 10px 0 40px 0;
     }
 
-    .ref:after
-    {
-        position: absolute;
-        left: 21.6%;
-        top: 3%;
-    }
-
     .header_loving_movies
     {
         text-align: initial;
         width: 1200px;
-        margin: 38px auto 36px;
+        margin: 2% auto 1.9%;
     }
 
     .film_header
     {
         position: relative;
         right: 2px;
-        margin: 14px 0 18px 0;
+        margin: 4.7% 0 6.4% 0;
     }
 
     .astral
@@ -979,15 +975,9 @@ label[for="sms"]
         left: 0;
     }
 
-    .arrow_left, .arrow_right
-    {
-        width: 70px;
-        top: 175px;
-    }
-
     .button
     {
-        margin: 2.85% auto 3.1% auto;
+        margin: 2.8% auto 3% auto;
         position: relative;
         right: 0.5%;
     }
@@ -1036,7 +1026,7 @@ label[for="sms"]
 
     label[for='sex']
     {
-        margin-bottom: 1.4%;
+        margin-bottom: 1.5%;
     }
 
     .male, .female
@@ -1078,8 +1068,8 @@ label[for="sms"]
 
     .footer
     {
-        line-height: 67px;
-        padding-right: 21px;
+        line-height: 66px;
+        padding-right: 22px;
     }
 }
 

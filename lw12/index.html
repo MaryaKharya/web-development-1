@@ -91,10 +91,13 @@
       </div>
     </article>
     <section class="films">     <!--Фильмы-->
-      <div class="container">   
+      <div class="container">
+        <img class="arrow_left" id="arrow_left" name="arrow_left" src="img/arrow_left.png">
+        <img class="arrow_right" id="arrow_right" name="arrow_right" src="img/arrow_right.png">
+        <div class="gradient gradient_start"></div>
+        <div class="gradient gradient_end"></div>
         <h2 class="header_loving_movies">Любимые фильмы</h2>
         <a class="anchor_film anchor" name="film"></a>
-        <img class="arrow_left" id="arrow_left" name="arrow_left" src="img/arrow_left.png">
         <div class="loving_movies">
           <div class="carusel" id="carusel">
             <div class="film" id="film1">
@@ -286,7 +289,6 @@
             </div>
           </div>
         </div>
-        <img class="arrow_right" id="arrow_right" name="arrow_right" src="img/arrow_right.png">
         <div class="toggle_description_block">
           <span class="toggle_description">Подробнее</span>
         </div>
@@ -322,7 +324,7 @@
             <input class="female" name="sex" id="female" type="radio" value="female">
             <label for="female">Женский</label>
           </div>
-          <label for="sms">Ваше сообщение <span class="star">*</span></label>
+          <label class="sms_label" for="sms">Ваше сообщение <span class="star">*</span></label>
           <textarea class="input_cell sms" name="sms" id="sms" maxlength="1020" required="required" title="Сообщение"></textarea>
           <input class="submit" type="submit" value="Отправить">
         </form>
